@@ -1,3 +1,5 @@
+import '../styles/components-styles/_Home.scss';
+
 const Home = () => {
   return (
     <div>

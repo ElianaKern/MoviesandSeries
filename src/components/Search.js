@@ -1,7 +1,8 @@
+import '../styles/components-styles/_Search.scss';
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-const Search= () => {
+const Search = () => {
   const [valorDelInput, setValorDelInput] = useState('');
   const [searchParams, setSearchParams] = useSearchParams({
     query: '',

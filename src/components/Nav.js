@@ -1,21 +1,32 @@
-import '../styles/_Nav.scss';
+import '../styles/components-styles/_Nav.scss';
+import Logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
 const Nav = () => {
   return (
-    <div>
-      <Link to="/">
-        <div>Home</div>
-      </Link>
-      <Link to="/movie-new">
-        <div>Nuevas Peliculas</div>
-      </Link>
-      <Link to="/movie-popular">
-        <div>Populares</div>
-      </Link>
-      <Link to="/search">
-        <div>Buscar</div>
-      </Link>
-    </div>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/" className="link-nav">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/movie-new" className="link-nav">
+            Nuevas Peliculas
+          </Link>
+        </li>
+        <li>
+          <Link to="/movie-popular" className="link-nav">
+            Populares
+          </Link>
+        </li>
+        <li>
+          <Link to="/search" className="link-nav">
+            Buscar
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
