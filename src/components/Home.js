@@ -1,9 +1,18 @@
 import '../styles/components-styles/_Home.scss';
+import ListMovie from "../components/ListMovie"
 
 const Home = () => {
+ 
   return (
-    <div>
-      <h1>HOME</h1>
+    <div className="home">
+      <ListMovie
+        title="Peliculas Populares"
+        url="popular"
+      />
+        <ListMovie
+        title="Peliculas Mejor Puntuadas"
+        url="top_rated"
+      />
     </div>
   );
 };
