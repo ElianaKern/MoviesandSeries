@@ -5,6 +5,7 @@ import Home from './components/Home';
 import MovieNew from './components/MovieNew';
 import MoviePopular from './components/MoviePopular';
 import Search from './components/Search';
+import DescripcionMovie from './components/DescripcionMovie';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/movie-new" element={<MovieNew />} />
         <Route path="/movie-popular" element={<MoviePopular />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/movie/:id" element={<DescripcionMovie/>} />
       </Routes>
     </BrowserRouter>
   );
