@@ -1,5 +1,6 @@
 import '../styles/components-styles/_Home.scss';
-import ListMovie from "../components/ListMovie"
+import ListMovie from "../components/ListMovie";
+
 
 const Home = () => {
  
