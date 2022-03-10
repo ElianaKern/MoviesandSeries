@@ -1,0 +1,30 @@
+.items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border-bottom: 1px solid rgb(194, 189, 189);
+    .img-item {
+      margin: 7px;
+      margin-left: 20px;
+      width: 50px;
+      img {
+        width: 45px;
+        border-radius: 35% 10%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+    }
+    .titulo-item {
+      text-decoration: none;
+      color:rgba(29, 26, 49, 0.753);
+      font-weight:700
+    }
+    .next{
+      background-color: rgba(79, 79, 218, 0.822);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      margin: 20px;
+      padding: 8px;
+      border-radius: 10px;
+    }
+  }
+

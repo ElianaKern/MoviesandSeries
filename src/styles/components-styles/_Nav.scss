@@ -1,33 +1,28 @@
 nav {
-    background-color: rgba(3, 1, 19, 0.753);
-    display: flex;
-    .logo-menu {
-      width: 120px;
-      margin-bottom: 10px;
-      margin-left: 20px;
-      .logo {
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-      }
-    }
-    ul {
-      display: flex;
-      align-items: center;
-      margin: 0px;
-      li {
-        list-style: none;
-        padding: 20px;
-        .link-nav {
-          text-decoration: none;
-          color: white;
-        }
-      }
-      li:hover {
-        background-color: rgba(79, 79, 218, 0.822);
-      }
+  background-color: rgba(3, 1, 19, 0.822);
+  display: flex;
+  .logo-menu {
+    width: 130px;
+    margin-left: 40px;
+    .logo {
+     width: 100%;
     }
   }
-
-
-
+  ul {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    li {
+      list-style: none;
+      padding: 50px;
+      .link-nav {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    li:hover {
+      background-color: rgba(79, 79, 218, 0.822);
+    }
+  }
+}
