@@ -1,3 +1,5 @@
+@import "../utilidades-styles/variables";
+
 .items {
     display: flex;
     justify-content: space-between;
@@ -11,17 +13,17 @@
       img {
         width: 45px;
         border-radius: 35% 10%;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: $box-shadow;
       }
     }
     .titulo-item {
       text-decoration: none;
-      color:rgba(29, 26, 49, 0.753);
-      font-weight:700
+      color: $color-principal;
+      font-weight:600
     }
     .next{
-      background-color: rgba(79, 79, 218, 0.822);
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-color: $color-secundario;
+      box-shadow: $box-shadow;
       margin: 20px;
       padding: 8px;
       border-radius: 10px;

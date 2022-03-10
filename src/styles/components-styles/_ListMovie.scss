@@ -1,3 +1,5 @@
+@import "../utilidades-styles/variables";
+
 .container-list-movie {
   border: solid 1px black;
   margin: 30px;
@@ -6,13 +8,13 @@
   width: 45%;
   height: 60vh;
   .title-list {
-    background-color:  rgba(3, 1, 19, 0.822);
+    background-color: $color-principal;
     display: flex;
     justify-content: center;
     width: 45%;
     position: fixed;
     h2 {
-      color: white;
+      color: $color-titulos-home;
       font-size: 20px;
       font-weight:600
     }

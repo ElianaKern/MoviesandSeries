@@ -1,5 +1,7 @@
+@import "../utilidades-styles/variables";
+
 nav {
-  background-color: rgba(3, 1, 19, 0.822);
+  background-color: $color-principal;
   display: flex;
   .logo-menu {
     width: 130px;
@@ -18,11 +20,11 @@ nav {
       padding: 50px;
       .link-nav {
         text-decoration: none;
-        color: white;
+        color:$color-titulos-home;
       }
     }
     li:hover {
-      background-color: rgba(79, 79, 218, 0.822);
+      background-color: $color-secundario;
     }
   }
 }
