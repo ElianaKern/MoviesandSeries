@@ -1,22 +1,23 @@
-@import "../utilidades-styles/variables";
+@import '../utilidades-styles/variables';
 
 .container-list-movie {
   border: solid 1px black;
   margin: 30px;
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 40%;
   height: 60vh;
   .title-list {
     background-color: $color-principal;
     display: flex;
     justify-content: center;
-    width: 45%;
-    position: fixed;
+    width: 40%;
+    position: absolute;
+  
     h2 {
       color: $color-titulos-home;
       font-size: 20px;
-      font-weight:600
+      font-weight: 600;
     }
   }
   .list {
@@ -24,5 +25,41 @@
     padding: 0;
     overflow-y: scroll;
     margin-top: 60px;
+  }
+}
+
+/*//////////////////////////////////////////////////////
+        RESPONSIVE
+///////////////////////////////////////////////////////*/
+@media screen and (max-width: 1100px) {
+  .container-list-movie {
+    width: 35%;
+    height: 45vh;
+    .title-list {
+      width: 35%;
+      h2{
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-list-movie {
+    width: 50%;
+    height: 40vh;
+    .title-list {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container-list-movie {
+    width: 70%;
+    height: 30vh;
+    .title-list {
+      width: 70%;
+    }
   }
 }
