@@ -1,17 +1,19 @@
-@import "../utilidades-styles/variables";
+@import '../utilidades-styles/variables';
 
 nav {
   background-color: $color-principal;
   display: flex;
   .logo-menu {
-    width: 130px;
+    display: flex;
+    width: 150px;
     margin-left: 40px;
     .logo {
-     width: 100%;
+      width: 100%;
     }
   }
   ul {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin: 0px;
     padding: 0px;
@@ -20,11 +22,54 @@ nav {
       padding: 50px;
       .link-nav {
         text-decoration: none;
-        color:$color-titulos-home;
+        color: $color-titulos-home;
       }
     }
     li:hover {
       background-color: $color-secundario;
+    }
+  }
+}
+
+/*//////////////////////////////////////////////////////
+        RESPONSIVE
+///////////////////////////////////////////////////////*/
+@media screen and (max-width: 1100px) {
+  nav {
+    ul {
+      li {
+        padding: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    .logo-menu {
+      width: 90px;
+      margin-left: 20px;
+    }
+    ul {
+      li {
+        padding: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav {
+    .logo-menu {
+      width: 140px;
+      margin-left: 5px;
+    }
+    ul {
+      margin-right: 5px;
+      li {
+        padding: 5px;
+        font-size: 14px;
+      }
     }
   }
 }
