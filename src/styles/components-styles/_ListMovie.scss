@@ -13,7 +13,7 @@
     background-color: $color-principal;
     position: absolute;
     h2 {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       color: $color-titulos-home;
     }
@@ -31,23 +31,20 @@
 ///////////////////////////////////////////////////////*/
 @media screen and (max-width: 1100px) {
   .container-list-movie {
-    width: 35%;
+    width:40%;
     height: 45vh;
     .title-list {
-      width: 35%;
-      h2{
-        font-size: 18px;
-      }
+      width: 40%;
     }
   }
 }
 
 @media screen and (max-width: 700px) {
   .container-list-movie {
-    width: 50%;
-    height: 40vh;
+    width: 65%;
+    height: 45vh;
     .title-list {
-      width: 50%;
+      width: 65%;
     }
   }
 }
@@ -55,9 +52,12 @@
 @media screen and (max-width: 550px) {
   .container-list-movie {
     width: 70%;
-    height: 30vh;
+    height: 40vh;
     .title-list {
       width: 70%;
+      h2{
+        font-size: 16px;
+      }
     }
   }
 }

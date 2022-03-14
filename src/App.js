@@ -1,4 +1,3 @@
-import "./styles/utilidades-styles/_reset.scss"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from './components/Home';

@@ -5,9 +5,9 @@ import { MdArrowForwardIos } from 'react-icons/md';
 const Item = ({ img, titleItem, id }) => {
   return (
       <li className='items'>
-        <div className="img-item">
+        <Link className="img-item" to={`/movie/${id}`}>
           <img src={img} />
-        </div>
+        </Link>
         <Link className="titulo-item" to={`/movie/${id}`}>
           <p>{titleItem}</p>
         </Link>

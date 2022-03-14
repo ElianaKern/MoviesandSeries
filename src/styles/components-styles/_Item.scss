@@ -10,10 +10,19 @@
     width: 50px;
     margin: 7px;
     margin-left: 20px;
+    transition: width 2s, height 2s, transform 2s;
     img {
-      width: 50px;
+      width: 100%;
       border-radius: 35% 10%;
       box-shadow: $box-shadow;
+    }
+  }
+  .img-item:hover {
+    width: 70px;
+    transform: rotate(360deg);
+    img {
+      box-shadow: $box-shadow-secundario;
+      cursor: pointer;
     }
   }
   .titulo-item {
@@ -22,6 +31,11 @@
     font-weight: 600;
     p {
       margin: 0px;
+      line-height: 1;
+    }
+    p:hover {
+      color: $color-secundario;
+      font-size: 18px;
     }
   }
   .next {
@@ -32,14 +46,25 @@
     background-color: $color-secundario;
     box-shadow: $box-shadow;
   }
+  .next:hover {
+    box-shadow: $box-shadow-secundario;
+    transform: scale(1.1);
+  }
 }
 
 /*//////////////////////////////////////////////////////
         RESPONSIVE
 ///////////////////////////////////////////////////////*/
 @media screen and (max-width: 1100px) {
-  .titulo-item {
-    font-size: 14px;
+  .items {
+    .titulo-item {
+      p {
+        font-size: 14px;
+      }
+      p:hover {
+        font-size: 16px;
+      }
+    }
   }
 }
 
@@ -49,9 +74,9 @@
       width: 40px;
       margin: 5px;
       margin-left: 10px;
-      img {
-        width: 40px;
-      }
+    }
+    .img-item:hover {
+      width: 60px;
     }
   }
 }
