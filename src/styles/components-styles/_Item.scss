@@ -7,9 +7,9 @@
   list-style: none;
   border-bottom: 1px solid rgb(194, 189, 189);
   .img-item {
+    width: 50px;
     margin: 7px;
     margin-left: 20px;
-    width: 50px;
     img {
       width: 50px;
       border-radius: 35% 10%;
@@ -25,11 +25,12 @@
     }
   }
   .next {
-    background-color: $color-secundario;
-    box-shadow: $box-shadow;
-    margin: 20px;
+    margin: 25px;
     padding: 8px;
     border-radius: 10px;
+    color: white;
+    background-color: $color-secundario;
+    box-shadow: $box-shadow;
   }
 }
 
@@ -45,9 +46,9 @@
 @media screen and (max-width: 550px) {
   .items {
     .img-item {
+      width: 40px;
       margin: 5px;
       margin-left: 10px;
-      width: 40px;
       img {
         width: 40px;
       }

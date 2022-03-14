@@ -15,7 +15,7 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/movie-new" className="link-nav">
-            Ultimos Lanzamientos
+            Lanzamientos
           </Link>
         </li>
         <li>
