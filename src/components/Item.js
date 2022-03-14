@@ -1,6 +1,6 @@
 import '../styles/components-styles/_Item.scss';
 import { Link } from 'react-router-dom';
-import { GrNext } from "react-icons/gr";
+import { MdArrowForwardIos } from 'react-icons/md';
 
 const Item = ({ img, titleItem, id }) => {
   return (
@@ -12,7 +12,7 @@ const Item = ({ img, titleItem, id }) => {
           <p>{titleItem}</p>
         </Link>
         <Link to={`/movie/${id}`}>
-          <GrNext className='next'/>
+          <MdArrowForwardIos className='next'/>
         </Link>
         
       </li>

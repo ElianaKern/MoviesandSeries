@@ -1,8 +1,9 @@
 @import '../utilidades-styles/variables';
+@import "../utilidades-styles/mixins";
 
 nav {
-  background-color: $color-principal;
   display: flex;
+  background-color: $color-principal;
   .logo-menu {
     display: flex;
     width: 150px;
@@ -12,8 +13,7 @@ nav {
     }
   }
   ul {
-    display: flex;
-    justify-content: center;
+    @include FlexCentrado();
     align-items: center;
     margin: 0px;
     padding: 0px;

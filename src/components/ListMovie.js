@@ -11,7 +11,7 @@ const ListMovie = ({ title, url }) => {
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
   }, []);
-  console.log(peliculas);
+
   return (
     <div className="container-list-movie">
       <div className="title-list">

@@ -1,0 +1,15 @@
+@mixin FlexCentrado() {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin FlexColumn() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin BorderButtonTarjeta() {
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.185);
+}
