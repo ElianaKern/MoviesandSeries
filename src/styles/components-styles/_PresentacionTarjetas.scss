@@ -5,6 +5,10 @@
   @include FlexColumn();
   align-items: center;
   margin-top: 1%;
+  h2 {
+    font-size: 20px;
+    color: $color-titulos;
+  }
   .container-tarjetas {
     @include FlexCentrado();
     flex-wrap: wrap;
@@ -22,9 +26,6 @@
         width: 100%;
         height: auto;
       }
-      .img-tarjeta:hover {
-        transform: scaleY(1.1);
-      }
       .title-tarjeta {
         @include FlexCentrado();
         @include BorderButtonTarjeta();
@@ -32,6 +33,8 @@
         font-size: 14px;
         font-weight: 600;
         h3 {
+          margin: 0px;
+          padding: 3px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -41,17 +44,74 @@
         @include FlexCentrado();
         @include BorderButtonTarjeta();
         .eye {
-          margin: 10px;
+          margin: 8px;
           padding: 5px;
           border-radius: 13px;
           border: 1px solid rgba(0, 0, 0, 0.185);
           font-size: 18px;
         }
         .eye:hover {
-          background-color: $color-secundario;
-          color: white;
-          transform: matrix(1, -0.3, 0, 1, 0, 0);
+          box-shadow: $box-shadow-secundario;
+          transform: scale(1.1);
         }
+      }
+    }
+    .tarjeta:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+/*//////////////////////////////////////////////////////
+        RESPONSIVE
+///////////////////////////////////////////////////////*/
+@media screen and (max-width: 1200px) {
+  .container-presentacion-tarjetas {
+    .container-tarjetas {
+      .tarjeta {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container-presentacion-tarjetas {
+    .container-tarjetas {
+      .tarjeta {
+        width: 180px;
+        .title-tarjeta {
+          padding: 0px;
+          font-size: 12px;
+        }
+        .icono-eye {
+          .eye {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container-presentacion-tarjetas {
+    h2 {
+      font-size: 16px;
+    }
+    .container-tarjetas {
+      .tarjeta {
+        width: 130px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .container-presentacion-tarjetas {
+    .container-tarjetas {
+      .tarjeta {
+        width: 100px;
       }
     }
   }

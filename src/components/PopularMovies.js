@@ -1,15 +1,12 @@
-import '../styles/components-styles/_PopularMovies.scss';
 import PresentacionTarjetas from './PresentacionTarjetas';
 import { useEffect, useState } from 'react';
-import { baseUrl } from './Auxiliares';
-import { apiKey } from './Auxiliares';
-
+import { baseUrl, apiKey, moviesPopular } from './Auxiliares';
 
 const PopularMovies = () => {
   const [peliculas, setPeliculas] = useState([]);
 
   useEffect(() => {
-    fetch(`${baseUrl}movie/popular?api_key=${apiKey}&language=en-US`)
+    fetch(`${baseUrl}movie/${moviesPopular}?api_key=${apiKey}&language=en-US`)
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
   }, []);

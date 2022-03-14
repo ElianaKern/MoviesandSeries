@@ -1,14 +1,12 @@
-import '../styles/components-styles/_NewMovies.scss';
 import PresentacionTarjetas from './PresentacionTarjetas';
 import { useEffect, useState } from 'react';
-import { baseUrl } from './Auxiliares';
-import { apiKey } from './Auxiliares';
+import { baseUrl, apiKey, moviesLanzamiento } from './Auxiliares';
 
 const NewMovies = () => {
   const [peliculas, setPeliculas] = useState([]);
 
   useEffect(() => {
-    fetch(`${baseUrl}movie/now_playing?api_key=${apiKey}&language=en-US`)
+    fetch(`${baseUrl}movie/${moviesLanzamiento}?api_key=${apiKey}&language=en-US`)
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
   }, []);
