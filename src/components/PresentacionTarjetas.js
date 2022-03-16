@@ -1,24 +1,33 @@
 import '../styles/components-styles/_PresentacionTarjetas.scss';
 import { ImEye } from 'react-icons/im';
 import { Link } from 'react-router-dom';
+import { urlBaseImg } from '../components/Auxiliares';
 
-const PresentacionTarjetas = ({ title, movies }) => {
+const PresentacionTarjetas = ({ titulo, peliculas }) => {
   return (
     <section className="container-presentacion-tarjetas">
-      <h2>{title}</h2>
+      <h2>{titulo}</h2>
       <div className="container-tarjetas">
-        {movies.map((movie) => (
-          <Link to={`/movie/${movie.id}`} key={movie.id} className="tarjeta">
-            <img className="img-tarjeta"
-              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
-            ></img>
-            <div className="title-tarjeta">
-              <h3>{movie.title}</h3>
-            </div>
-            <div className="icono-eye">
-              <ImEye className="eye" />
-            </div>
-          </Link>
+        {peliculas.map((pelicula) => (
+          <article className="tarjeta">
+            <Link
+              to={`/movie/${pelicula.id}`}
+              key={pelicula.id}
+              className="link"
+            >
+              <img
+                className="img-tarjeta"
+                src={`${urlBaseImg}w200/${pelicula.poster_path}`}
+                alt={`poster de ${pelicula.title}`}
+              ></img>
+              <div className="title-tarjeta">
+                <h3>{pelicula.title}</h3>
+              </div>
+              <div className="icono-eye">
+                <ImEye className="eye" />
+              </div>
+            </Link>
+          </article>
         ))}
       </div>
       <h4>PAGINADO</h4>

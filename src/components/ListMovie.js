@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
 import '../styles/components-styles/_ListMovie.scss';
-import { baseUrl } from '../components/Auxiliares';
-import { apiKey } from '../components/Auxiliares';
+import { useEffect, useState } from 'react';
+import { baseUrl, apiKey } from '../components/Auxiliares';
 import Item from '../components/Item';
 
 const ListMovie = ({ title, url }) => {

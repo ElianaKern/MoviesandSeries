@@ -6,7 +6,7 @@ const Item = ({ img, titleItem, id }) => {
   return (
       <li className='items'>
         <Link className="img-item" to={`/movie/${id}`}>
-          <img src={img} />
+          <img src={img} alt={`poster de ${titleItem}`}/>
         </Link>
         <Link className="titulo-item" to={`/movie/${id}`}>
           <p>{titleItem}</p>

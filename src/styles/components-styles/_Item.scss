@@ -8,7 +8,7 @@
   border-bottom: 1px solid rgb(194, 189, 189);
   .img-item {
     width: 50px;
-    margin: 7px;
+    padding: 8px;
     margin-left: 20px;
     transition: width 2s, height 2s, transform 2s;
     img {
@@ -29,10 +29,6 @@
     text-decoration: none;
     color: $color-principal;
     font-weight: 600;
-    p {
-      margin: 0px;
-      line-height: 1;
-    }
     p:hover {
       color: $color-secundario;
       font-size: 18px;
@@ -72,7 +68,7 @@
   .items {
     .img-item {
       width: 40px;
-      margin: 5px;
+      padding: 5px;
       margin-left: 10px;
     }
     .img-item:hover {

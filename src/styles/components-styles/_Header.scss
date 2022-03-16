@@ -1,0 +1,72 @@
+@import '../utilidades-styles/variables';
+@import '../utilidades-styles/mixins';
+
+header {
+  width: 100%;
+  @include FlexCentrado();
+  align-items: center;
+  .slick-slider {
+    width: 100%;
+    .slick-list {
+      width: 100%;
+      .slick-track {
+        width: 100%;
+        .slick-slide {
+          width: 100%;
+          div {
+            width: 100%;
+            .container-img-header {
+              width: 100%;
+              height: 600px;
+              position: relative;
+              .modal-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                @include FlexColumn();
+                justify-content: flex-end;
+                align-items: center;
+                .modal-pelicula {
+                  width: 600px;
+                  border: 1px solid black;
+                  background-color: rgba(0, 255, 255, 0.294);
+                  margin-bottom: 50px;
+                }
+              }
+              .img-carrousel {
+                width: 100%;
+                object-fit: contain;
+                margin-right: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*//////////////////////////////////////////////////////
+        RESPONSIVE
+///////////////////////////////////////////////////////*/
+@media screen and (max-width: 1000px) {
+  header {
+    .slick-slider {
+      .slick-list {
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    .slick-slider {
+      .slick-list {
+        height: 220px;
+      }
+    }
+  }
+}
