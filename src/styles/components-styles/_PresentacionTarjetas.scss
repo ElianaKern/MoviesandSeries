@@ -14,8 +14,11 @@
     flex-wrap: wrap;
     margin-bottom: 2%;
     .tarjeta {
-      @include EstiloContenedorTarjetalink();
-      cursor: pointer;
+      @include EstiloContenedorTarjeta();
+      .link{
+        text-decoration: none;
+        color: $color-titulos;
+      }
       .img-tarjeta {
         width: 100%;
         height: auto;
@@ -27,7 +30,6 @@
         font-size: 14px;
         font-weight: 600;
         h3 {
-          margin: 0px;
           padding: 3px;
           white-space: nowrap;
           overflow: hidden;

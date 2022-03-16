@@ -22,7 +22,7 @@ nav {
       padding: 5px;
       @include FlexCentrado();
       align-items: center;
-      @include EstiloLiLink();
+      @include EstiloLinkLi();
       color: $color-titulos-home;
     }
     .link-nav:hover {

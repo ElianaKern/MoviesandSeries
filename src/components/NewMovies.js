@@ -10,7 +10,7 @@ const NewMovies = () => {
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
   }, []);
-  console.log(peliculas);
+ 
   return (
     <PresentacionTarjetas titulo="Ultimos Lanzamientos" peliculas={peliculas} />
   );

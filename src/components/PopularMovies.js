@@ -10,7 +10,7 @@ const PopularMovies = () => {
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
   }, []);
-  console.log(peliculas);
+
   return (
     <PresentacionTarjetas titulo="Peliculas Populares" peliculas={peliculas} />
   );

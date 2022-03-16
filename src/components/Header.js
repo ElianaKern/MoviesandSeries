@@ -1,15 +1,15 @@
+import '../styles/components-styles/_Header.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import '../styles/components-styles/_Header.scss';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   baseUrl,
   apiKey,
   urlBaseImg,
   moviesLanzamiento,
 } from '../components/Auxiliares';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [peliculas, setPeliculas] = useState([]);
@@ -27,20 +27,20 @@ const Header = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    /*autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,*/
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
   };
 
   return (
     <header>
       <Slider {...propsCarrousel}>
         {peliculas.map((pelicula) => (
-          <div className="container-img-header">
+          <div className="container-img-header" key={pelicula.id}>
             <img
               src={`${urlBaseImg}original/${pelicula.backdrop_path}`}
               className="img-carrousel"
-              key={pelicula.id}
+              alt={`poster de ${pelicula.title}`}
             />
             <div className="modal-container">
               <div className="modal-pelicula">
@@ -53,7 +53,6 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            
           </div>
         ))}
       </Slider>

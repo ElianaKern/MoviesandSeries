@@ -9,17 +9,25 @@ const PresentacionTarjetas = ({ titulo, peliculas }) => {
       <h2>{titulo}</h2>
       <div className="container-tarjetas">
         {peliculas.map((pelicula) => (
-          <Link to={`/movie/${pelicula.id}`} key={pelicula.id} className="tarjeta">
-            <img className="img-tarjeta"
-              src={`${urlBaseImg}w200/${pelicula.poster_path}`}
-            ></img>
-            <div className="title-tarjeta">
-              <h3>{pelicula.title}</h3>
-            </div>
-            <div className="icono-eye">
-              <ImEye className="eye" />
-            </div>
-          </Link>
+          <article className="tarjeta">
+            <Link
+              to={`/movie/${pelicula.id}`}
+              key={pelicula.id}
+              className="link"
+            >
+              <img
+                className="img-tarjeta"
+                src={`${urlBaseImg}w200/${pelicula.poster_path}`}
+                alt={`poster de ${pelicula.title}`}
+              ></img>
+              <div className="title-tarjeta">
+                <h3>{pelicula.title}</h3>
+              </div>
+              <div className="icono-eye">
+                <ImEye className="eye" />
+              </div>
+            </Link>
+          </article>
         ))}
       </div>
       <h4>PAGINADO</h4>

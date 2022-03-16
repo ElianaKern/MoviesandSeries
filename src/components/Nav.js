@@ -1,11 +1,12 @@
 import '../styles/components-styles/_Nav.scss';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
+
 const Nav = () => {
   return (
     <nav>
       <div className="logo-menu">
-        <img src={Logo} className="logo"></img>
+        <img src={Logo} className="logo" alt="pochoclos mas bebida y tira de imagenes"></img>
       </div>
       <ul>
         <Link to="/" className="link-nav">
