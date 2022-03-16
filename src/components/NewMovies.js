@@ -12,7 +12,7 @@ const NewMovies = () => {
   }, []);
   console.log(peliculas);
   return (
-    <PresentacionTarjetas title="Ultimos Lanzamientos" movies={peliculas} />
+    <PresentacionTarjetas titulo="Ultimos Lanzamientos" peliculas={peliculas} />
   );
 };
 export default NewMovies;

@@ -1,20 +1,24 @@
 import '../styles/components-styles/_Home.scss';
 import ListMovie from "../components/ListMovie";
-
+import Header from './Header';
+import { moviesMejorPuntuada, moviesPopular } from './Auxiliares';
 
 const Home = () => {
  
   return (
-    <div className="home">
+    <>
+    <Header/>
+    <section className="home">
       <ListMovie
         title="Peliculas Populares"
-        url="popular"
+        url= {moviesPopular}
       />
         <ListMovie
         title="Peliculas Mejor Puntuadas"
-        url="top_rated"
+        url= {moviesMejorPuntuada}
       />
-    </div>
+    </section>
+    </>
   );
 };
 export default Home;

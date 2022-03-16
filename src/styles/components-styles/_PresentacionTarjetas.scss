@@ -14,13 +14,7 @@
     flex-wrap: wrap;
     margin-bottom: 2%;
     .tarjeta {
-      @include FlexColumn();
-      text-decoration: none;
-      color: $color-titulos;
-      width: 240px;
-      margin-right: 30px;
-      margin-left: 30px;
-      margin-top: 3%;
+      @include EstiloContenedorTarjetalink();
       cursor: pointer;
       .img-tarjeta {
         width: 100%;

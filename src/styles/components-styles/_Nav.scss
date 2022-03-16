@@ -16,16 +16,13 @@ nav {
   ul {
     display: flex;
     width: 50%;
-    margin: 0px;
-    padding: 0px;
     height: 100%;
     .link-nav {
-      @include FlexCentrado();
       width: 110px;
       padding: 5px;
+      @include FlexCentrado();
       align-items: center;
-      list-style: none;
-      text-decoration: none;
+      @include EstiloLiLink();
       color: $color-titulos-home;
     }
     .link-nav:hover {
@@ -58,4 +55,3 @@ nav {
     }
   }
 }
-

@@ -13,14 +13,13 @@
     background-color: $color-principal;
     position: absolute;
     h2 {
+      padding: 20px;
       font-size: 18px;
       font-weight: 600;
       color: $color-titulos-home;
     }
   }
   .list {
-    margin: 0;
-    padding: 0;
     margin-top: 60px;
     overflow-y: scroll;
   }

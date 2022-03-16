@@ -12,7 +12,7 @@ const PopularMovies = () => {
   }, []);
   console.log(peliculas);
   return (
-    <PresentacionTarjetas title="Peliculas Populares" movies={peliculas} />
+    <PresentacionTarjetas titulo="Peliculas Populares" peliculas={peliculas} />
   );
  
 };

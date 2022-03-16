@@ -6,17 +6,16 @@ import PopularMovies from './components/PopularMovies';
 import Search from './components/Search';
 import DescripcionMovie from './components/DescripcionMovie';
 
-
 const App = () => {
   return (
     <BrowserRouter>
       <Nav></Nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movie-new" element={<NewMovies/>} />
+        <Route path="/movie-new" element={<NewMovies />} />
         <Route path="/movie-popular" element={<PopularMovies />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/movie/:id" element={<DescripcionMovie/>} />
+        <Route path="/movie/:id" element={<DescripcionMovie />} />
       </Routes>
     </BrowserRouter>
   );

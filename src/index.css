@@ -7,6 +7,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(0, 0, 0, 0.096);
 }
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+p {
+  line-height: 1;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  margin: 0;
+  padding: 0;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

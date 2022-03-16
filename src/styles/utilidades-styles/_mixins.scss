@@ -8,6 +8,21 @@
   flex-direction: column;
 }
 
+@mixin EstiloLiLink() {
+  list-style: none;
+  text-decoration: none;
+}
+
+@mixin EstiloContenedorTarjetalink() {
+  @include FlexColumn();
+  text-decoration: none;
+  color: $color-titulos;
+  width: 240px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 3%;
+}
+
 @mixin BorderButtonTarjeta() {
   border-width: 0px 1px 1px 1px;
   border-style: solid;
