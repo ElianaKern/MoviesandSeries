@@ -1,0 +1,35 @@
+@import '../utilidades-styles/mixins';
+
+.secccion-descripcion-movie {
+  width: 100%;
+  @include FlexCentrado();
+  .container-background-img {
+    @include FlexCentrado();
+    position: relative;
+    .background-img {
+      width: 100%;
+    }
+  }
+  .container-poster-descripcion {
+    .container-poster {
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      right: 25%;
+      bottom: 10%;
+      @include FlexCentrado();
+      justify-content: flex-end;
+      align-items: center;
+      .poster {
+        width: 100%;
+      }
+      .container-descripcion {
+        color: white;
+        padding: 20px;
+        h3, p, h5 {
+            margin: 10px;
+        }
+      }
+    }
+  }
+}
