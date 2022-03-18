@@ -19,6 +19,11 @@ header {
               width: 100%;
               height: 600px;
               position: relative;
+              .img-carrousel {
+                width: 100%;
+                object-fit: contain;
+                margin-right: 0px;
+              }
               .modal-container {
                 position: absolute;
                 top: 0;
@@ -34,11 +39,6 @@ header {
                   background-color: rgba(0, 255, 255, 0.294);
                   margin-bottom: 50px;
                 }
-              }
-              .img-carrousel {
-                width: 100%;
-                object-fit: contain;
-                margin-right: 0px;
               }
             }
           }
