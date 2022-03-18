@@ -6,6 +6,7 @@ import NewMovies from './components/NewMovies';
 import PopularMovies from './components/PopularMovies';
 import Search from './components/Search';
 import DescripcionMovie from './components/DescripcionMovie';
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/search" element={<Search />} />
         <Route path="/movie/:id" element={<DescripcionMovie />} />
       </Routes>
+      <Footer></Footer>
     </BrowserRouter>
   );
 };

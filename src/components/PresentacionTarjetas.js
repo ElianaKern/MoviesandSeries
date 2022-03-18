@@ -9,10 +9,9 @@ const PresentacionTarjetas = ({ titulo, peliculas }) => {
       <h2>{titulo}</h2>
       <div className="container-tarjetas">
         {peliculas.map((pelicula) => (
-          <article className="tarjeta">
+          <article className="tarjeta" key={pelicula.id}>
             <Link
               to={`/movie/${pelicula.id}`}
-              key={pelicula.id}
               className="link"
             >
               <img
