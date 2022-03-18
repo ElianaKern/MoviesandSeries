@@ -1,4 +1,4 @@
-import "../styles/components-styles/_DescripcionMovie.scss";
+import '../styles/components-styles/_DescripcionMovie.scss';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { baseUrl, apiKey, urlBaseImg } from '../components/Auxiliares';
@@ -16,30 +16,35 @@ const DescripcionMovie = () => {
   }, []);
   return (
     <section className="secccion-descripcion-movie" key={pelicula.id}>
-      <div className="container-background-img">
-        <img
-          src={`${urlBaseImg}original/${pelicula.backdrop_path}`}
-          alt={`poster de ${pelicula.title}`}
-          className="background-img"
-        />
-      </div>
-      <article className="container-poster-descripcion">
-        <div className="container-poster">
-          <img
-            src={`${urlBaseImg}w400/${pelicula.poster_path}`}
-            alt={`poster de ${pelicula.title}`}
-            className="poster"
-          />
-          <div className="container-descripcion">
-            <h3>{pelicula.title}</h3>
-            <p>Fecha de lanzamiento: {pelicula.release_date}.  Duracion: {pelicula.runtime} minutos.</p>
-            <h5>Reseña</h5>
-            <p>{pelicula.overview}</p>
-            <h5>Generos</h5>
-            <p></p>
+      <div
+        className="container-background-img"
+        style={{
+          backgroundImage: `url(${urlBaseImg}original/${pelicula.backdrop_path})`,
+        }}
+      >
+        <article className="container-poster-descripcion">
+          <div className="container">
+            <div className='container-poster'>
+            <img
+              src={`${urlBaseImg}w500/${pelicula.poster_path}`}
+              alt={`poster de ${pelicula.title}`}
+              className="poster"
+            />
+            </div>
+            <div className="container-descripcion">
+              <h3>{pelicula.title}</h3>
+              <p>
+                Fecha de lanzamiento: {pelicula.release_date}. Duracion:{' '}
+                {pelicula.runtime} minutos.
+              </p>
+              <h5>Reseña</h5>
+              <p>{pelicula.overview}</p>
+              <h5>Generos</h5>
+              <p></p>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </section>
   );
 };
