@@ -9,9 +9,13 @@
   align-items: center;
   .contacto-footer{
       display: flex;
-     
       li{
-        @include EstiloLinkLi
+        @include EstiloLinkLi;
+        .icono-footer{
+          font-size: 35px;
+          margin: 10px;
+          color: $color-titulos-home;
+        }
       }
   }
 }
