@@ -1,15 +1,10 @@
 import '../styles/components-styles/_ListMovie.scss';
-import { useEffect, useState } from 'react';
-import { baseUrl, apiKey, urlBaseImg } from '../components/Auxiliares';
+import { urlBaseImg, tipoMovie} from '../components/Auxiliares';
 import Item from '../components/Item';
+import UseFetch from "../hooks/UseFetch";
 
-const ListMovie = ({ title, url }) => {
-  const [peliculas, setPeliculas] = useState([]);
-  useEffect(() => {
-    fetch(`${baseUrl}movie/${url}?api_key=${apiKey}&language=es-AR&page=1`)
-      .then((res) => res.json())
-      .then((data) => setPeliculas(data.results));
-  }, []);
+const ListMovie = ({ title, categoria }) => {
+  const peliculas = UseFetch(`${tipoMovie},${categoria}`)
 
   return (
     <div className="container-list-movie">

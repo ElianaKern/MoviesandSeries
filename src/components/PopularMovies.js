@@ -1,16 +1,9 @@
 import PresentacionTarjetas from './PresentacionTarjetas';
-import { useEffect, useState } from 'react';
-import { baseUrl, apiKey, moviesPopular } from './Auxiliares';
+import { tipoMovie, moviesPopular } from './Auxiliares';
+import UseFetch from "../hooks/UseFetch";
 
 const PopularMovies = () => {
-  const [peliculas, setPeliculas] = useState([]);
-
-  useEffect(() => {
-    fetch(`${baseUrl}movie/${moviesPopular}?api_key=${apiKey}&language=en-US`)
-      .then((res) => res.json())
-      .then((data) => setPeliculas(data.results));
-  }, []);
-
+  const peliculas = UseFetch(`${tipoMovie},${moviesPopular}`)
   return (
     <PresentacionTarjetas titulo="Peliculas Populares" peliculas={peliculas} />
   );

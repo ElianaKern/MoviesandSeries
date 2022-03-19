@@ -1,7 +1,8 @@
 import '../styles/components-styles/_DescripcionMovie.scss';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { baseUrl, apiKey, urlBaseImg } from '../components/Auxiliares';
+import { baseUrl, apiKey, urlBaseImg, tipoMovie, 
+  qParamsLenguaje, qParamsPagina} from '../components/Auxiliares';
 
 const DescripcionMovie = () => {
   const [pelicula, setPelicula] = useState([]);
@@ -9,7 +10,7 @@ const DescripcionMovie = () => {
   console.log(pelicula);
   useEffect(() => {
     fetch(
-      `${baseUrl}movie/${params.id}?api_key=${apiKey}&language=es-AR&page=1`
+      `${baseUrl}/${tipoMovie}/${params.id}?${apiKey}${qParamsLenguaje}=es-AR${qParamsPagina}=1`
     )
       .then((res) => res.json())
       .then((data) => setPelicula(data));
