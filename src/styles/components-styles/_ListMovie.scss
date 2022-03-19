@@ -1,5 +1,5 @@
 @import '../utilidades-styles/variables';
-@import "../utilidades-styles/mixins";
+@import '../utilidades-styles/mixins';
 
 .container-list-movie {
   @include FlexColumn();
@@ -7,9 +7,10 @@
   height: 60vh;
   border: solid 1px black;
   margin: 30px;
+  position: relative;
   .title-list {
     @include FlexCentrado();
-    width: 40%;
+    width: 100%;
     background-color: $color-principal;
     position: absolute;
     h2 {
@@ -21,7 +22,16 @@
   }
   .list {
     margin-top: 60px;
-    overflow-y: scroll;
+    overflow: auto;
+  }
+  .list::-webkit-scrollbar {
+    width: 13px;
+    background-color: rgba(41, 53, 155, 0.198);
+  }
+  .list::-webkit-scrollbar-thumb {
+    background: $color-principal;
+    border-radius: 5px;
+    border: 2px solid $color-secundario;
   }
 }
 
@@ -30,11 +40,8 @@
 ///////////////////////////////////////////////////////*/
 @media screen and (max-width: 1100px) {
   .container-list-movie {
-    width:40%;
+    width: 40%;
     height: 45vh;
-    .title-list {
-      width: 40%;
-    }
   }
 }
 
@@ -42,9 +49,6 @@
   .container-list-movie {
     width: 65%;
     height: 45vh;
-    .title-list {
-      width: 65%;
-    }
   }
 }
 
@@ -53,8 +57,7 @@
     width: 70%;
     height: 40vh;
     .title-list {
-      width: 70%;
-      h2{
+      h2 {
         font-size: 16px;
       }
     }
