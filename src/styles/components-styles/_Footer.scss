@@ -1,0 +1,21 @@
+@import '../utilidades-styles/variables';
+@import '../utilidades-styles/mixins';
+.footer {
+  height: 130px;
+  background-color: $color-principal;
+  color: $color-titulos-home;
+  @include FlexCentrado;
+  flex-direction: column;
+  align-items: center;
+  .contacto-footer{
+      display: flex;
+      li{
+        @include EstiloLinkLi;
+        .icono-footer{
+          font-size: 35px;
+          margin: 10px;
+          color: $color-titulos-home;
+        }
+      }
+  }
+}

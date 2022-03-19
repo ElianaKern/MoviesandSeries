@@ -2,10 +2,25 @@
   display: flex;
   justify-content: center;
 }
-
+@mixin FlexCentradoCompleto() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @mixin FlexColumn() {
   display: flex;
   flex-direction: column;
+}
+@mixin FlexColumnCentrado() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin FlexColumnCompleto() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
 }
 
 @mixin EstiloLinkLi() {
