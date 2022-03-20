@@ -1,19 +1,18 @@
 import '../styles/components-styles/_DescripcionMovie.scss';
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { baseUrl, apiKey, urlBaseImg } from '../components/Auxiliares';
+import {
+  baseUrl,
+  apiKey,
+  urlBaseImg,
+  tipoMovie,
+  qParamsLenguaje,
+  qParamsPagina,
+} from '../components/Auxiliares';
+import UseFetch from '../hooks/UseFetch';
 
 const DescripcionMovie = () => {
-  const [pelicula, setPelicula] = useState([]);
   const params = useParams();
-  console.log(pelicula);
-  useEffect(() => {
-    fetch(
-      `${baseUrl}movie/${params.id}?api_key=${apiKey}&language=es-AR&page=1`
-    )
-      .then((res) => res.json())
-      .then((data) => setPelicula(data));
-  }, []);
+  const pelicula = UseFetch(tipoMovie, params.id);
   return (
     <section className="secccion-descripcion-movie" key={pelicula.id}>
       <div
@@ -24,12 +23,12 @@ const DescripcionMovie = () => {
       >
         <article className="container-poster-descripcion">
           <div className="container">
-            <div className='container-poster'>
-            <img
-              src={`${urlBaseImg}w500/${pelicula.poster_path}`}
-              alt={`poster de ${pelicula.title}`}
-              className="poster"
-            />
+            <div className="container-poster">
+              <img
+                src={`${urlBaseImg}w500/${pelicula.poster_path}`}
+                alt={`poster de ${pelicula.title}`}
+                className="poster"
+              />
             </div>
             <div className="container-descripcion">
               <h3>{pelicula.title}</h3>

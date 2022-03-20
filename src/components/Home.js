@@ -11,11 +11,11 @@ const Home = () => {
     <section className="home">
       <ListMovie
         title="Peliculas Populares"
-        url= {moviesPopular}
+        categoria= {moviesPopular}
       />
         <ListMovie
         title="Peliculas Mejor Puntuadas"
-        url= {moviesMejorPuntuada}
+        categoria= {moviesMejorPuntuada}
       />
     </section>
     </>

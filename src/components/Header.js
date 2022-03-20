@@ -2,26 +2,16 @@ import '../styles/components-styles/_Header.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  baseUrl,
-  apiKey,
-  urlBaseImg,
   moviesLanzamiento,
+  tipoMovie,
+  urlBaseImg,
 } from '../components/Auxiliares';
+import UseFetch from '../hooks/UseFetch';
 
 const Header = () => {
-  const [peliculas, setPeliculas] = useState([]);
-
-  useEffect(() => {
-    fetch(
-      `${baseUrl}movie/${moviesLanzamiento}?api_key=${apiKey}&language=es-AR&page=1`
-    )
-      .then((res) => res.json())
-      .then((data) => setPeliculas(data.results));
-  }, []);
-
+  const { results: peliculas = [] } = UseFetch(tipoMovie, moviesLanzamiento);
   const propsCarrousel = {
     dots: true,
     infinite: true,
