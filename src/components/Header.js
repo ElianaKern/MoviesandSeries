@@ -3,12 +3,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
-import { moviesLanzamiento, tipoMovie, urlBaseImg } from '../components/Auxiliares';
-import UseFetch from "../hooks/UseFetch";
+import {
+  moviesLanzamiento,
+  tipoMovie,
+  urlBaseImg,
+} from '../components/Auxiliares';
+import UseFetch from '../hooks/UseFetch';
 
 const Header = () => {
-  const peliculas = UseFetch(`${tipoMovie}, ${moviesLanzamiento}`)
-
+  const { results: peliculas = [] } = UseFetch(tipoMovie, moviesLanzamiento);
   const propsCarrousel = {
     dots: true,
     infinite: true,
