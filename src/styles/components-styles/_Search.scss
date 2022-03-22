@@ -1,0 +1,16 @@
+@import '../utilidades-styles/mixins';
+
+.seccion-busqueda {
+  .busqueda {
+    @include FlexColumnCompleto();
+    margin: 30px;
+    h2{
+        margin: 20px;
+    }
+    .lupa{
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+  }
+}
