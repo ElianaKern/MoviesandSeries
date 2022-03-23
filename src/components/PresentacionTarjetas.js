@@ -2,6 +2,8 @@ import '../styles/components-styles/_PresentacionTarjetas.scss';
 import { ImEye } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 import { urlBaseImg } from '../components/Auxiliares';
+import NoDisponible from "../assets/no-disponible.png"
+console.log(NoDisponible)
 
 const PresentacionTarjetas = ({ titulo, peliculas }) => {
   return (
@@ -15,8 +17,8 @@ const PresentacionTarjetas = ({ titulo, peliculas }) => {
               className="link"
             >
               <img
-                className="img-tarjeta"
-                src={`${urlBaseImg}w200/${pelicula.poster_path}`}
+                className="img-tarjeta" //aca tampoco me funcion NoDisponible///
+                src={pelicula.poster_path !== null ? `${urlBaseImg}w200/${pelicula.poster_path}` : {NoDisponible}}
                 alt={`poster de ${pelicula.title}`}
               ></img>
               <div className="title-tarjeta">
