@@ -1,3 +1,5 @@
+@import "../utilidades-styles/variables";  
+
 @mixin FlexCentrado() {
   display: flex;
   justify-content: center;

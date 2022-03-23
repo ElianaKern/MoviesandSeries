@@ -32,14 +32,21 @@ const DescripcionMovie = () => {
             </div>
             <div className="container-descripcion">
               <h3>{pelicula.title}</h3>
-              <p>
-                Fecha de lanzamiento: {pelicula.release_date}. Duracion:{' '}
-                {pelicula.runtime} minutos.
-              </p>
+              <p>Fecha de lanzamiento: {pelicula.release_date} </p>
+              <p>Duracion : {pelicula.runtime} minutos.</p>
+              <p>Puntuacion : {pelicula.vote_average}</p>
               <h5>Reseña</h5>
               <p>{pelicula.overview}</p>
-              <h5>Generos</h5>
-              <p></p>
+              <ul>
+                <p>Generos :</p>
+                {pelicula?.genres?.map((dato) => (
+                  <li>{dato.name}</li>
+                ))}
+              </ul>
+              <p>Productora :</p>
+              {pelicula?.production_companies?.map((productora) => (
+                <p>{productora.name}</p>
+              ))}
             </div>
           </div>
         </article>

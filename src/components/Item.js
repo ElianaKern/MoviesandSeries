@@ -13,8 +13,7 @@ const Item = ({ img, titleItem, id }) => {
         </Link>
         <Link to={`/movie/${id}`}>
           <MdArrowForwardIos className='next'/>
-        </Link>
-        
+        </Link>   
       </li>
   );
 };

@@ -26,9 +26,11 @@
     }
   }
   .titulo-item {
+    width: 50%;
     text-decoration: none;
     color: $color-principal;
     font-weight: 600;
+    justify-content: center;
     p:hover {
       color: $color-secundario;
       font-size: 16px;
@@ -51,18 +53,7 @@
 /*//////////////////////////////////////////////////////
         RESPONSIVE
 ///////////////////////////////////////////////////////*/
-@media screen and (max-width: 1100px) {
-  .items {
-    .titulo-item {
-      p {
-        font-size: 14px;
-      }
-      p:hover {
-        font-size: 16px;
-      }
-    }
-  }
-}
+
 
 @media screen and (max-width: 550px) {
   .items {
