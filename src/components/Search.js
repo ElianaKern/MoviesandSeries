@@ -11,13 +11,13 @@ import {
   page,
 } from './Auxiliares';
 import PresentacionTarjetas from './PresentacionTarjetas';
-import { FaSearch } from "react-icons/fa";
+import { FaSearch } from 'react-icons/fa';
 
 const Search = () => {
   const [valorDelInput, setValorDelInput] = useState('');
   const [resultados, setResultados] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams({
-    query: '',
+    query: 'El padrino',
   });
 
   const handleChange = (e) => {
@@ -40,14 +40,22 @@ const Search = () => {
     }
   }, [searchParams]);
 
-  console.log(resultados);
   return (
     <section className="seccion-busqueda">
-      <div className='busqueda'>
+      <div className="busqueda">
         <h2>Busca tu Pelicula</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" onChange={handleChange} value={valorDelInput} />
-          <input type="submit" value="Buscar" /><FaSearch className='lupa'/>
+          <div className="input-busqueda">
+            <input
+              type="text"
+              onChange={handleChange}
+              value={valorDelInput}
+              aria-label="introducir nombre"
+            />
+            <button type="submit" aria-label="buscar">
+              <FaSearch className="lupa" />
+            </button>
+          </div>
         </form>
       </div>
       <PresentacionTarjetas

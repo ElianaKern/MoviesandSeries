@@ -31,7 +31,7 @@
     font-weight: 600;
     p:hover {
       color: $color-secundario;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   .next {
@@ -39,7 +39,7 @@
     padding: 8px;
     border-radius: 10px;
     color: white;
-    background-color: $color-secundario;
+    background-color: $color-principal;
     box-shadow: $box-shadow;
   }
   .next:hover {

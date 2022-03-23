@@ -29,8 +29,7 @@
 }
 
 @mixin EstiloContenedorTarjeta() {
-  @include FlexColumn();
-  color: $color-titulos;
+  @include FlexColumnCentrado();
   width: 240px;
   margin-right: 30px;
   margin-left: 30px;

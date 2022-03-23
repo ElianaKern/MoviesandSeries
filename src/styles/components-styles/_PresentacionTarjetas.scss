@@ -4,13 +4,12 @@
 .container-presentacion-tarjetas {
   @include FlexColumn();
   align-items: center;
-  margin-top: 1%;
+  margin-top: 2%;
   h2 {
-    font-size: 20px;
     color: $color-titulos;
   }
   .container-tarjetas {
-    @include FlexCentrado();
+    @include FlexCentradoCompleto();
     flex-wrap: wrap;
     margin-bottom: 2%;
     .tarjeta {
@@ -21,7 +20,8 @@
       }
       .img-tarjeta {
         width: 100%;
-        height: auto;
+
+        box-sizing: content-box;
       }
       .title-tarjeta {
         @include FlexCentrado();
@@ -71,6 +71,18 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .container-presentacion-tarjetas {
+    .container-tarjetas {
+      .tarjeta {
+        width: 200px;
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .container-presentacion-tarjetas {
     .container-tarjetas {
@@ -90,7 +102,7 @@
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 700px) {
   .container-presentacion-tarjetas {
     h2 {
       font-size: 16px;
@@ -98,17 +110,15 @@
     .container-tarjetas {
       .tarjeta {
         width: 130px;
+        .icono-eye {
+          .eye {
+            font-size: 14px;
+            margin: 5px;
+            padding: 2px;
+          }
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: 380px) {
-  .container-presentacion-tarjetas {
-    .container-tarjetas {
-      .tarjeta {
-        width: 100px;
-      }
-    }
-  }
-}
