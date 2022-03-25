@@ -17,8 +17,8 @@ const PresentacionTarjetas = ({ titulo, peliculas }) => {
               className="link"
             >
               <img
-                className="img-tarjeta" //aca tampoco me funcion NoDisponible///
-                src={pelicula.poster_path !== null ? `${urlBaseImg}w200/${pelicula.poster_path}` : {NoDisponible}}
+                className="img-tarjeta" 
+                src={pelicula.poster_path !== null ? `${urlBaseImg}w200/${pelicula.poster_path}` : NoDisponible}
                 alt={`poster de ${pelicula.title}`}
               ></img>
               <div className="title-tarjeta">

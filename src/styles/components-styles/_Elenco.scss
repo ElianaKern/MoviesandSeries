@@ -1,0 +1,17 @@
+@import "../utilidades-styles/mixins";
+
+.modal-container-elenco {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  @include FlexCentradoCompleto();
+  .container-list {
+    @include BackgrounImagePrincipal();
+    position: relative;
+    width: 60%;
+    .div-close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+}

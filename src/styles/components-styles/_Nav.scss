@@ -2,16 +2,23 @@
 @import '../utilidades-styles/mixins';
 
 nav {
-  height: 100px;
+  height: 80px;
   display: flex;
   background-color: $color-principal;
   .logo-menu {
-    display: flex;
-    width: 130px;
-    margin-left: 40px;
+   box-sizing: border-box;
+    width: 100px;
+    margin-left: 30px;
     .logo {
       width: 100%;
+      height: auto;
+      box-sizing: border-box;
     }
+  }
+  .logo-menu:hover {
+    background-color: $color-secundario;
+    border-radius: 10px;
+    box-shadow: $box-shadow-secundario;
   }
   ul {
     display: flex;
@@ -23,10 +30,12 @@ nav {
       @include FlexCentrado();
       align-items: center;
       @include EstiloLinkLi();
-      color: $color-titulos-home;
+      color: $color-titulos;
     }
     .link-nav:hover {
       background-color: $color-secundario;
+      border-radius: 10px;
+      box-shadow: $box-shadow-secundario;
     }
   }
 }
@@ -43,15 +52,10 @@ nav {
 }
 @media screen and (max-width: 600px) {
   nav {
-    height: 200px;
+    height: 130px;
     flex-direction: column;
     .logo-menu {
       margin: 0px;
-    }
-    .link-nav {
-      li {
-        font-size: 14px;
-      }
     }
   }
 }

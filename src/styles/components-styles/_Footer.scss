@@ -3,18 +3,22 @@
 .footer {
   height: 130px;
   background-color: $color-principal;
-  color: $color-titulos-home;
+  color: $color-titulos;
   @include FlexCentrado;
   flex-direction: column;
   align-items: center;
-  .contacto-footer{
+  .contacto-footer {
       display: flex;
-      li{
+      li {
         @include EstiloLinkLi;
-        .icono-footer{
+        .icono-footer {
           font-size: 35px;
           margin: 10px;
-          color: $color-titulos-home;
+          color: $color-titulos;
+          border-radius: 10px;
+        }
+        .icono-footer:hover {
+          box-shadow: $box-shadow-secundario;
         }
       }
   }

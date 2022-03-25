@@ -1,3 +1,5 @@
+@import '../utilidades-styles/variables';
+
 @mixin FlexCentrado() {
   display: flex;
   justify-content: center;
@@ -20,7 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 @mixin EstiloLinkLi() {
@@ -40,5 +42,18 @@
 @mixin BorderButtonTarjeta() {
   border-width: 0px 1px 1px 1px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.185);
+  border-color: $color-secundario
+}
+
+@mixin BackgrounImagePrincipal() {
+  background-image: url('../../assets/Blue\ And\ Black.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin BackgrounImage() {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

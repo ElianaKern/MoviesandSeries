@@ -2,20 +2,23 @@ import '../styles/components-styles/_Item.scss';
 import { Link } from 'react-router-dom';
 import { MdArrowForwardIos } from 'react-icons/md';
 
-const Item = ({ img, titleItem, id }) => {
+const Item = ({ img, titleItem, idRuta }) => {
   return (
+    <Link className='link' to={idRuta}> {/*/ver cual dejo /<Link className='link' to={id ? `/movie/${id}` : ''}> // */}
       <li className='items'>
-        <Link className="img-item" to={`/movie/${id}`}>
+        <span className="img-item">
           <img src={img} alt={`poster de ${titleItem}`}/>
-        </Link>
-        <Link className="titulo-item" to={`/movie/${id}`}>
-          <p>{titleItem}</p>
-        </Link>
-        <Link to={`/movie/${id}`}>
+        </span>
+        <span className="titulo-item">
+          <span>{titleItem}</span>
+        </span>
+        <span>
           <MdArrowForwardIos className='next'/>
-        </Link>
-        
+        </span>   
       </li>
+    </Link>
   );
 };
 export default Item;
+
+//<Link className='link' to={id ? `/movie/${id}` : ''}> //
