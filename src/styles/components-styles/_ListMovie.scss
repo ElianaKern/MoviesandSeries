@@ -1,11 +1,11 @@
 @import '../utilidades-styles/variables';
 @import '../utilidades-styles/mixins';
 
-.container-list-movie {
+.container-list {
   @include FlexColumn();
   width: 40%;
   height: 60vh;
-  border: solid 1px black;
+  border: solid 1px $color-secundario;
   margin: 30px;
   position: relative;
   .title-list {
@@ -17,7 +17,7 @@
       padding: 20px;
       font-size: 18px;
       font-weight: 600;
-      color: $color-titulos-home;
+      color: $color-titulos;
     }
   }
   .list {
@@ -39,23 +39,21 @@
         RESPONSIVE
 ///////////////////////////////////////////////////////*/
 @media screen and (max-width: 1100px) {
-  .container-list-movie {
+  .container-list {
     width: 40%;
     height: 45vh;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .container-list-movie {
-    width: 65%;
+  .container-list {
+    width: 80%;
     height: 45vh;
   }
 }
 
 @media screen and (max-width: 550px) {
-  .container-list-movie {
-    width: 70%;
-    height: 40vh;
+  .container-list {
     .title-list {
       h2 {
         font-size: 16px;

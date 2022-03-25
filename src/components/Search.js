@@ -17,7 +17,7 @@ const Search = () => {
   const [valorDelInput, setValorDelInput] = useState('');
   const [resultados, setResultados] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams({
-    query: 'El padrino',
+    query: "diario de una pasion",
   });
 
   const handleChange = (e) => {

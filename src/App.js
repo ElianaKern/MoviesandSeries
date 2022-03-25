@@ -6,6 +6,7 @@ import NewMovies from './components/NewMovies';
 import PopularMovies from './components/PopularMovies';
 import Search from './components/Search';
 import DescripcionMovie from './components/DescripcionMovie';
+import DescripcionActor from "./components/DescripcionActor";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/movie-popular" element={<PopularMovies />} />
         <Route path="/search" element={<Search />} />
         <Route path="/movie/:id" element={<DescripcionMovie />} />
+        <Route path="/actor/:id" element={<DescripcionActor />} />
       </Routes>
       <Footer></Footer>
     </BrowserRouter>

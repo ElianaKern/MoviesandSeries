@@ -30,7 +30,7 @@ nav {
       @include FlexCentrado();
       align-items: center;
       @include EstiloLinkLi();
-      color: $color-titulos-home;
+      color: $color-titulos;
     }
     .link-nav:hover {
       background-color: $color-secundario;

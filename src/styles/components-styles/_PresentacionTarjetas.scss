@@ -4,9 +4,12 @@
 .container-presentacion-tarjetas {
   @include FlexColumn();
   align-items: center;
-  margin-top: 2%;
+  margin-bottom: 10px;
   h2 {
     color: $color-titulos;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-size: 18px;
   }
   .container-tarjetas {
     @include FlexCentradoCompleto();
@@ -14,23 +17,20 @@
     margin-bottom: 2%;
     .tarjeta {
       @include EstiloContenedorTarjeta();
-      .link{
+      .link {
         text-decoration: none;
         color: $color-titulos;
       }
       .img-tarjeta {
         width: 100%;
-
         box-sizing: content-box;
       }
       .title-tarjeta {
         @include FlexCentrado();
         @include BorderButtonTarjeta();
-        padding: 8px;
-        font-size: 14px;
-        font-weight: 600;
+        font-size: 12px;
         h3 {
-          padding: 3px;
+          padding: 8px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -85,6 +85,9 @@
 
 @media screen and (max-width: 800px) {
   .container-presentacion-tarjetas {
+    h2 {
+      font-size: 16px;
+    }
     .container-tarjetas {
       .tarjeta {
         width: 180px;
@@ -121,4 +124,3 @@
     }
   }
 }
-

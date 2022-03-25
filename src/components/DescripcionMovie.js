@@ -1,5 +1,6 @@
 import '../styles/components-styles/_DescripcionMovie.scss';
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 import {
   baseUrl,
   apiKey,
@@ -9,12 +10,18 @@ import {
   qParamsPagina,
 } from '../components/Auxiliares';
 import UseFetch from '../hooks/UseFetch';
+import Elenco from './Elenco';
 
 const DescripcionMovie = () => {
   const params = useParams();
   const pelicula = UseFetch(tipoMovie, params.id);
+  const [verElenco,setVerElenco] = useState(false);
+  const handleClick = () => {
+    setVerElenco(true)
+  }
+
   return (
-    <section className="secccion-descripcion-movie" key={pelicula.id}>
+    <section className="secccion-descripcion-movie">
       <div
         className="container-background-img"
         style={{
@@ -40,15 +47,17 @@ const DescripcionMovie = () => {
               <ul>
                 <p>Generos :</p>
                 {pelicula?.genres?.map((dato) => (
-                  <li>{dato.name}</li>
+                  <li key={dato.id}>{dato.name}</li>
                 ))}
               </ul>
               <p>Productora :</p>
               {pelicula?.production_companies?.map((productora) => (
-                <p>{productora.name}</p>
+                <p key={productora.id}>{productora.name}</p>
               ))}
+            <button onClick={handleClick}>Ver Elenco</button>
             </div>
           </div>
+          {verElenco && <Elenco setVerElenco={setVerElenco}/>}
         </article>
       </div>
     </section>
