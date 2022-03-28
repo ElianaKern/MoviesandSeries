@@ -20,6 +20,7 @@ const Header = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    arrows: false,
   };
 
   return (

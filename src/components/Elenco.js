@@ -48,7 +48,7 @@ const Elenco = ({ setVerElenco }) => {
                   : NoDisponible
               }
               titleItem={`Personaje: ${actor.character}`}
-              idRuta={`/actor/${actor.cast_id}`}
+              idRuta={`/actor/${actor.id}`}
             />
           ))}
         </ul>
