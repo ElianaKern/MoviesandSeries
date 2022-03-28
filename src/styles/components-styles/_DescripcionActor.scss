@@ -1,0 +1,53 @@
+@import '../utilidades-styles/variables';
+@import '../utilidades-styles/mixins';
+
+.container-datos-actor {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  .conteiner-img {
+    width: 300px;
+    height: 450px;
+    .img-actor {
+      width: 100%;
+    }
+  }
+  .datos-actor {
+    color: white;
+    margin-left: 15px;
+    width: 400px;
+    height: 450px;
+    overflow-y: scroll;
+    position: relative;
+    .name {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-color: $color-secundario;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      width: 400px;
+      height: 50px;
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .datos{
+        margin-top: 70px;
+        width: 400px;
+    }
+  }
+  .datos-actor::-webkit-scrollbar {
+    width: 13px;
+    background-color: rgba(41, 53, 155, 0.198);
+  }
+  .datos-actor::-webkit-scrollbar-thumb {
+    background: $color-principal;
+    border-radius: 5px;
+    border: 2px solid $color-secundario;
+  }
+}
