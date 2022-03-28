@@ -1,53 +1,83 @@
 @import '../utilidades-styles/variables';
 @import '../utilidades-styles/mixins';
 
-.container-datos-actor {
+.seccion-datos-actor {
+  width: 100%;
+  height: 80vh;
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  .conteiner-img {
-    width: 300px;
-    height: 450px;
-    .img-actor {
-      width: 100%;
-    }
-  }
-  .datos-actor {
-    color: white;
-    margin-left: 15px;
-    width: 400px;
-    height: 450px;
-    overflow-y: scroll;
-    position: relative;
-    .name {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      background-color: $color-secundario;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 5px;
-      width: 400px;
-      height: 50px;
-      h3 {
-        font-size: 16px;
+  .container-datos-actor {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    .conteiner-img {
+      width: 30%;
+      box-sizing: content-box;
+      overflow: hidden;
+      .img-actor {
+        width: 100%;
       }
     }
-    .datos{
-        margin-top: 70px;
-        width: 400px;
+    .datos-actor {
+      color: white;
+      margin-left: 10px;
+      width: 45%;
+      height: 75vh;
+      position: relative;
+      .name {
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+        background-color: $color-secundario;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 60px;
+        h3 {
+          font-size: 16px;
+        }
+      }
+      .datos {
+        margin-top: 60px;
+        width: 95%;
+        height: 60vh;
+        padding: 10px;
+        overflow: auto;
+        h4 {
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+        p {
+          margin-bottom: 15px; 
+          line-height: normal;
+        }
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          color: $color-titulos;
+          background-color: $color-secundario;
+          padding: 5px;
+          border-radius: 10px;
+          box-shadow: $box-shadow;
+        }
+        a:hover{
+          box-shadow: $box-shadow-secundario;
+        }
+
+      }
+      .datos::-webkit-scrollbar {
+        width: 13px;
+        background-color: rgba(41, 53, 155, 0.198);
+      }
+      .datos::-webkit-scrollbar-thumb {
+        background: $color-principal;
+        border-radius: 5px;
+        border: 2px solid $color-secundario;
+      } 
+
     }
-  }
-  .datos-actor::-webkit-scrollbar {
-    width: 13px;
-    background-color: rgba(41, 53, 155, 0.198);
-  }
-  .datos-actor::-webkit-scrollbar-thumb {
-    background: $color-principal;
-    border-radius: 5px;
-    border: 2px solid $color-secundario;
   }
 }

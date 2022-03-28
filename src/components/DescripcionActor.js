@@ -24,6 +24,7 @@ const DescripcionActor = () => {
   console.log(data);
 
   return (
+    <section className='seccion-datos-actor'>
     <div className="container-datos-actor">
       <div key={data.id} className="conteiner-img">
         <img
@@ -52,6 +53,7 @@ const DescripcionActor = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 export default DescripcionActor;
