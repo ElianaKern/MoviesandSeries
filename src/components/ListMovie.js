@@ -6,7 +6,7 @@ import NoDisponible from "../assets/no-disponible.png"
 
 const ListMovie = ({ title, categoria }) => {
   const { results: peliculas = [] } = UseFetch(tipoMovie, categoria);
-
+ 
   return (
     <div className="container-list">
       <div className="title-list">
@@ -17,7 +17,7 @@ const ListMovie = ({ title, categoria }) => {
           <Item
             key={pelicula.id}
             img={pelicula.poster_path !== null ? `${urlBaseImg}w200/${pelicula.poster_path}` : NoDisponible }
-            titleItem={pelicula.title}
+            titleItem={pelicula.title? pelicula.title : pelicula.name}
             idRuta={ `/movie/${pelicula.id}`}
           />
         ))}

@@ -1,17 +1,25 @@
-@import "../utilidades-styles/mixins";
+@import '../utilidades-styles/mixins';
 
 .modal-container-elenco {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.39);
   @include FlexCentradoCompleto();
+  z-index: 2;
+  position: relative;
   .container-list {
     @include BackgrounImagePrincipal();
     position: relative;
-    width: 60%;
+    width: 80%;
     .div-close {
       position: absolute;
       top: 5px;
       right: 5px;
+      .close-elenco {
+        button {
+          @include Button();
+        }
+      }
     }
   }
 }

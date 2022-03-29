@@ -8,16 +8,19 @@ const Nav = () => {
   const contexto = useContext(Contexto);
   console.log(contexto)
   const handleChangeTipo = (e) => {
-    contexto.setTipo(e.target.vale)
+    contexto.setTipo(e.target.value)
     console.log(e.target.value)
   }
-
 
   return (
     <nav>
       <div className="logo-menu">
         <img src={Logo} className="logo" alt="pochoclos mas bebida y tira de imagenes"></img>
       </div>
+      <select onChange={handleChangeTipo}>
+          <option value="movie">Peliculas</option>
+          <option value="tv">Series</option>
+      </select>
       <ul>
         <Link to="/" className="link-nav">
           <li>Home</li>
@@ -34,10 +37,6 @@ const Nav = () => {
         <Link to="/search" className="link-nav">
           <li>Buscar</li>
         </Link>
-        <select onChange={handleChangeTipo}>
-          <option value="movie">Peliculas</option>
-          <option value="tv">Series</option>
-        </select>
       </ul>
     </nav>
   );

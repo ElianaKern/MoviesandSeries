@@ -22,7 +22,7 @@ nav {
   }
   ul {
     display: flex;
-    width: 50%;
+    width: 40%;
     height: 100%;
     .link-nav {
       width: 110px;
@@ -37,20 +37,21 @@ nav {
       border-radius: 10px;
       box-shadow: $box-shadow-secundario;
     }
-    select{
-      background-color:$color-principal;
-      color: $color-titulos;
-      border-radius: 10px;
-      box-shadow: $box-shadow-secundario;
-      padding: 20px;
-      margin: 1px;
-
-    }
-    select:hover{
-      background-color: $color-secundario;
-      border-radius: 10px;
-    }
   }
+  select{
+    background-color:$color-principal;
+    color: $color-titulos;
+    border-radius: 10px;
+    box-shadow: $box-shadow-secundario;
+    padding: 20px;
+    margin: 1px;
+
+  }
+  select:hover{
+    background-color: $color-secundario;
+    border-radius: 10px;
+  }
+
 }
 
 /*//////////////////////////////////////////////////////

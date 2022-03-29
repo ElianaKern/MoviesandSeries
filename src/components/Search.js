@@ -43,7 +43,7 @@ const Search = () => {
   return (
     <section className="seccion-busqueda">
       <div className="busqueda">
-        <h2>Busca tu Pelicula</h2>
+        <h2>Busca por nombre</h2>
         <form onSubmit={handleSubmit}>
           <div className="input-busqueda">
             <input
