@@ -57,3 +57,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@mixin Button() {
+  background-color: $color-principal;
+  font-size: 16px;
+  padding: 8px;
+  color: $color-titulos;
+  border-radius: 20%;
+  box-shadow: $box-shadow-secundario;
+}

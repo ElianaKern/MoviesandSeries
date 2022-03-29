@@ -3,37 +3,40 @@
 
 .seccion-datos-actor {
   width: 100%;
-  height: 80vh;
+  height: 100%;
   display: flex;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.295);
   .container-datos-actor {
     display: flex;
     justify-content: center;
     width: 80%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     .conteiner-img {
-      width: 30%;
+      width: 40%;
       box-sizing: content-box;
-      overflow: hidden;
-      .img-actor {
-        width: 100%;
+      display: flex;
+      justify-content: center;
+      .container {
+        width: 90%;
+        .img-actor {
+          width: 100%;
+          border-radius: 35% 10%;
+          box-shadow: $box-shadow;
+        }
       }
     }
     .datos-actor {
-      color: white;
-      margin-left: 10px;
-      width: 45%;
-      height: 75vh;
-      position: relative;
+      width: 40%;
+      color: $color-titulos;
       .name {
         display: flex;
         justify-content: center;
-        align-items:center ;
+        align-items: center;
         background-color: $color-secundario;
-        position: absolute;
-        top: 0px;
-        left: 0px;
+        box-shadow: $box-shadow;
+        border-radius: 35% 10%;
         width: 100%;
         height: 60px;
         h3 {
@@ -41,17 +44,14 @@
         }
       }
       .datos {
-        margin-top: 60px;
-        width: 95%;
-        height: 60vh;
+        width: 100%;
         padding: 10px;
-        overflow: auto;
         h4 {
           margin-top: 10px;
           margin-bottom: 5px;
         }
         p {
-          margin-bottom: 15px; 
+          margin-bottom: 15px;
           line-height: normal;
         }
         a {
@@ -60,24 +60,36 @@
           color: $color-titulos;
           background-color: $color-secundario;
           padding: 5px;
-          border-radius: 10px;
+          border-radius: 35% 10%;
           box-shadow: $box-shadow;
         }
-        a:hover{
+        a:hover {
           box-shadow: $box-shadow-secundario;
         }
-
       }
-      .datos::-webkit-scrollbar {
-        width: 13px;
-        background-color: rgba(41, 53, 155, 0.198);
-      }
-      .datos::-webkit-scrollbar-thumb {
-        background: $color-principal;
-        border-radius: 5px;
-        border: 2px solid $color-secundario;
-      } 
+    }
+  }
+}
 
+/*//////////////////////////////////////////////////////
+        RESPONSIVE
+///////////////////////////////////////////////////////*/
+@media screen and (max-width: 800px) {
+  .seccion-datos-actor {
+    .container-datos-actor {
+      width: 90%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .conteiner-img {
+        width: 80%;
+        .container{
+          width: 60%;
+        }
+      }
+      .datos-actor {
+        width: 80%;
+      }
     }
   }
 }

@@ -9,6 +9,8 @@ export const lenguaje = "language"
 export const page = "page"
 export const moviesPopular = "popular"
 export const moviesLanzamiento = "now_playing" //"on_the_air "
+export const tvLanzamiento = "on_the_air"
+export const lanzamiento = (moviesLanzamiento, tvLanzamiento) => moviesLanzamiento ? moviesLanzamiento : tvLanzamiento
 export const moviesMejorPuntuada = "top_rated"
 export const moviesCredits = "credits"
 export const urlBaseImg = "https://image.tmdb.org/t/p/"
