@@ -1,9 +1,12 @@
 import PresentacionTarjetas from './PresentacionTarjetas';
-import { tipoMovie, moviesPopular } from './Auxiliares';
+import { popular } from './Auxiliares';
 import UseFetch from '../hooks/UseFetch';
+import { useContext } from 'react';
+import Contexto from '../contexto/Contexto';
 
 const PopularMovies = () => {
-  const { results: peliculas = [] } = UseFetch(tipoMovie, moviesPopular);
+  const valorTipo = useContext(Contexto).tipo;
+  const { results: peliculas = [] } = UseFetch(valorTipo, popular);
   return (
     <PresentacionTarjetas titulo="Populares" peliculas={peliculas} />
   );

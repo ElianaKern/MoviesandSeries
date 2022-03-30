@@ -6,17 +6,16 @@ import Contexto from "../contexto/Contexto";
 
 
 const NewMovies = () => {
-  const valorCategoria = useContext(Contexto).tipo
-
+  const valorTipo = useContext(Contexto).tipo
   const categoria = () => {
-    if(valorCategoria === "movie") {
+    if(valorTipo === "movie") {
       return moviesLanzamiento
     }
       else {
         return tvLanzamiento
       }
   }
-  const { results: peliculas = [] } = UseFetch(tipoMovie, categoria());
+  const { results: peliculas = [] } = UseFetch(valorTipo, categoria());
   
 
   return (

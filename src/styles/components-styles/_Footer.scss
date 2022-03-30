@@ -8,18 +8,18 @@
   flex-direction: column;
   align-items: center;
   .contacto-footer {
-      display: flex;
-      li {
-        @include EstiloLinkLi;
-        .icono-footer {
-          font-size: 35px;
-          margin: 10px;
-          color: $color-titulos;
-          border-radius: 10px;
-        }
-        .icono-footer:hover {
-          box-shadow: $box-shadow-secundario;
-        }
+    display: flex;
+    li {
+      @include EstiloLinkLi;
+      .icono-footer {
+        font-size: 35px;
+        margin: 10px;
+        color: $color-titulos;
+        border-radius: 10px;
       }
+      .icono-footer:hover {
+        box-shadow: $box-shadow-secundario;
+      }
+    }
   }
 }
