@@ -62,12 +62,4 @@ nav {
     }
   }
 }
-@media screen and (max-width: 600px) {
-  nav {
-    height: 130px;
-    flex-direction: column;
-    .logo-menu {
-      margin: 0px;
-    }
-  }
-}
+

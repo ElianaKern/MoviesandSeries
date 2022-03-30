@@ -1,7 +1,7 @@
 import '../styles/components-styles/_Home.scss';
 import ListMovie from "../components/ListMovie";
 import Header from './Header';
-import { moviesMejorPuntuada, moviesPopular } from './Auxiliares';
+import { mejorPuntuada, popular } from './Auxiliares';
 
 const Home = () => {
  
@@ -11,11 +11,11 @@ const Home = () => {
     <section className="home">
       <ListMovie
         title="Populares"
-        categoria= {moviesPopular}
+        categoria= {popular}
       />
         <ListMovie
         title="Mejor Puntuadas"
-        categoria= {moviesMejorPuntuada}
+        categoria= {mejorPuntuada}
       />
     </section>
     </>

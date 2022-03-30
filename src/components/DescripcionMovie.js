@@ -1,13 +1,16 @@
 import '../styles/components-styles/_DescripcionMovie.scss';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import { urlBaseImg, tipoMovie } from '../components/Auxiliares';
+import { urlBaseImg } from '../components/Auxiliares';
 import UseFetch from '../hooks/UseFetch';
 import Elenco from './Elenco';
+import { useContext } from 'react';
+import Contexto from '../contexto/Contexto';
 
 const DescripcionMovie = () => {
+  const valorTipo = useContext(Contexto).tipo;
   const params = useParams();
-  const pelicula = UseFetch(tipoMovie, params.id);
+  const pelicula = UseFetch(valorTipo, params.id);
   const [verElenco, setVerElenco] = useState(false);
   const handleClick = () => {
     setVerElenco(true);

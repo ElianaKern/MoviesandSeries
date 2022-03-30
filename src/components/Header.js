@@ -5,7 +5,6 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import {
   moviesLanzamiento,
-  tipoMovie,
   urlBaseImg,
   tvLanzamiento
 } from '../components/Auxiliares';
@@ -15,17 +14,16 @@ import { useContext } from 'react';
 import Contexto from "../contexto/Contexto";
 
 const Header = () => {
-  const valorCategoria = useContext(Contexto).tipo
-
+  const valorTipo = useContext(Contexto).tipo
   const categoria = () => {
-    if(valorCategoria === "movie") {
+    if(valorTipo === "movie") {
       return moviesLanzamiento
     }
       else {
         return tvLanzamiento
       }
   }
-  const { results: peliculas = [] } = UseFetch(tipoMovie, categoria());
+  const { results: peliculas = [] } = UseFetch(valorTipo, categoria());
   const propsCarrousel = {
     dots: true,
     infinite: true,
@@ -51,7 +49,7 @@ const Header = () => {
               <div className="modal-pelicula">
                 <h3>{pelicula.title}</h3>
                 <p>{pelicula.overview}</p>
-                <Link to={`/movie/${pelicula.id}`}>
+                <Link to={`/${valorTipo}/${pelicula.id}`}>
                   <button>
                     <span>Ver mas...</span>
                   </button>

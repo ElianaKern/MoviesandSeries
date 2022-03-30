@@ -4,8 +4,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   baseUrl,
-  tipoMovie,
-  moviesCredits,
+  credits,
   apiKey,
   lenguaje,
   page,
@@ -13,14 +12,17 @@ import {
 } from '../components/Auxiliares';
 import Item from './Item';
 import NoDisponible from '../assets/no-disponible.png';
+import { useContext } from 'react';
+import Contexto from '../contexto/Contexto';
 
 const Elenco = ({ setVerElenco }) => {
   const params = useParams();
   const [data, setData] = useState([]);
+  const valorTipo = useContext(Contexto).tipo;
 
   useEffect(() => {
     fetch(
-      `${baseUrl}/${tipoMovie}/${params.id}/${moviesCredits}?${apiKey}&${lenguaje}=es-AR&${page}=1`
+      `${baseUrl}/${valorTipo}/${params.id}/${credits}?${apiKey}&${lenguaje}=es-AR&${page}=1`
     )
       .then((res) => res.json())
       .then((dataRes) => setData(dataRes));

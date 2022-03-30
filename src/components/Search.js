@@ -4,7 +4,6 @@ import { useSearchParams } from 'react-router-dom';
 import {
   baseUrl,
   search,
-  tipoMovie,
   query,
   apiKey,
   lenguaje,
@@ -12,8 +11,11 @@ import {
 } from './Auxiliares';
 import PresentacionTarjetas from './PresentacionTarjetas';
 import { FaSearch } from 'react-icons/fa';
+import { useContext } from 'react';
+import Contexto from '../contexto/Contexto';
 
 const Search = () => {
+  const valorTipo = useContext(Contexto).tipo;
   const [valorDelInput, setValorDelInput] = useState('');
   const [resultados, setResultados] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams({
@@ -31,7 +33,7 @@ const Search = () => {
   useEffect(() => {
     if (searchParams.get('query')) {
       fetch(
-        `${baseUrl}/${search}/${tipoMovie}?${query}=${searchParams.get(
+        `${baseUrl}/${search}/${valorTipo}?${query}=${searchParams.get(
           'query'
         )}&${apiKey}&${lenguaje}=es-AR&${page}=1`
       )
@@ -43,7 +45,7 @@ const Search = () => {
   return (
     <section className="seccion-busqueda">
       <div className="busqueda">
-        <h2>Busca por nombre</h2>
+        <h2>Busca Series o Peliculas por nombre</h2>
         <form onSubmit={handleSubmit}>
           <div className="input-busqueda">
             <input

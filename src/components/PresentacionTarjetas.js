@@ -2,10 +2,13 @@ import '../styles/components-styles/_PresentacionTarjetas.scss';
 import { ImEye } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 import { urlBaseImg } from '../components/Auxiliares';
-import NoDisponible from "../assets/no-disponible.png"
+import NoDisponible from "../assets/no-disponible.png";
+import { useContext } from 'react';
+import Contexto from '../contexto/Contexto';
 console.log(NoDisponible)
 
 const PresentacionTarjetas = ({ titulo, peliculas }) => {
+  const valorTipo = useContext(Contexto).tipo
   return (
     <section className="container-presentacion-tarjetas">
       <h2>{titulo}</h2>
@@ -13,7 +16,7 @@ const PresentacionTarjetas = ({ titulo, peliculas }) => {
         {peliculas.map((pelicula) => (
           <article className="tarjeta" key={pelicula.id}>
             <Link
-              to={`/movie/${pelicula.id}`}
+              to={`/${valorTipo}/${pelicula.id}`}
               className="link"
             >
               <img
