@@ -20,38 +20,36 @@ nav {
     border-radius: 10px;
     box-shadow: $box-shadow-secundario;
   }
-  ul {
+  .ul-nav {
     display: flex;
     width: 40%;
     height: 100%;
-    .link-nav {
+    .li-nav {
       width: 110px;
       padding: 5px;
       @include FlexCentrado();
       align-items: center;
       @include EstiloLinkLi();
       color: $color-titulos;
+      button{
+        background-color:$color-principal;
+        color: $color-titulos;
+        border-radius: 10px;
+        box-shadow: $box-shadow-secundario;
+        padding: 20px;
+        margin: 1px;
+      }
+      button:hover{
+        background-color: $color-secundario;
+        border-radius: 10px;
+      }
     }
-    .link-nav:hover {
+    .li-nav:hover {
       background-color: $color-secundario;
       border-radius: 10px;
       box-shadow: $box-shadow-secundario;
     }
   }
-  select{
-    background-color:$color-principal;
-    color: $color-titulos;
-    border-radius: 10px;
-    box-shadow: $box-shadow-secundario;
-    padding: 20px;
-    margin: 1px;
-
-  }
-  select:hover{
-    background-color: $color-secundario;
-    border-radius: 10px;
-  }
-
 }
 
 /*//////////////////////////////////////////////////////

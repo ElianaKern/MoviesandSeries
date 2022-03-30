@@ -10,6 +10,7 @@ import DescripcionActor from './components/DescripcionActor';
 import Footer from './components/Footer';
 import Contexto from './contexto/Contexto';
 import { useState } from 'react';
+import NavBarLateral from './components/NavBarLateral';
 
 const App = () => {
   const [tipo, setTipo] = useState("movie");
@@ -18,7 +19,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Contexto.Provider value={contexto}>
-        <Nav></Nav>
+        <NavBarLateral/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movie-new" element={<NewMovies />} />
