@@ -6,7 +6,7 @@ import {
   baseUrl,
   apiKey,
   lenguaje,
-  page,
+  paginacion,
   urlBaseImgCast,
 } from '../components/Auxiliares';
 
@@ -15,7 +15,7 @@ const DescripcionActor = () => {
   const params = useParams();
   useEffect(() => {
     fetch(
-      `${baseUrl}/person/${params.id}?${apiKey}&${lenguaje}=es-AR&${page}=1`
+      `${baseUrl}/person/${params.id}?${apiKey}&${lenguaje}=es-AR&${paginacion}=1`
     )
       .then((res) => res.json())
       .then((dataRes) => setData(dataRes));
@@ -44,13 +44,7 @@ const DescripcionActor = () => {
             <p>Lugar de Nacimiento: {data.place_of_birth}</p>
             <h4>Biografia:</h4>
             <p>{data.biography !== '' ? data.biography : 'No Disponible'}</p>
-            <a
-              href={
-                data.homepage !== null ? `${data.homepage}` : 'No Disponible'
-              }
-            >
-              Homepage
-            </a>
+            {data.homepage !== null && <a href= {data.homepage}>Homepage </a>}
           </div>
         </div>
       </div>

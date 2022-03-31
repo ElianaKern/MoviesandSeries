@@ -7,7 +7,7 @@ import {
   credits,
   apiKey,
   lenguaje,
-  page,
+  paginacion,
   urlBaseImgCast,
 } from '../components/Auxiliares';
 import Item from './Item';
@@ -21,7 +21,7 @@ const Elenco = ({ setVerElenco }) => {
   const valorTipo = useContext(Contexto).tipo;
   useEffect(() => {
     fetch(
-      `${baseUrl}/${valorTipo}/${params.id}/${credits}?${apiKey}&${lenguaje}=es-AR&${page}=1`
+      `${baseUrl}/${valorTipo}/${params.id}/${credits}?${apiKey}&${lenguaje}=es-AR&${paginacion}=1`
     )
       .then((res) => res.json())
       .then((dataRes) => setData(dataRes));

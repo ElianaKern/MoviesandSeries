@@ -5,7 +5,7 @@ export const apiKey = "api_key=f73cd8d6fb4e966a87b1469c24e12f50"
 export const search = "search"
 export const query = "query"
 export const lenguaje = "language"
-export const page = "page"
+export const paginacion = "page"
 export const popular = "popular"
 export const moviesLanzamiento = "now_playing" 
 export const tvLanzamiento = "on_the_air"
@@ -20,3 +20,5 @@ export const hrefGitHub = "https://github.com/ElianaKern"
 // export const querisUrl = (categoria, tipo, busqueda) =>
 // busqueda ? `${categoria}/${tipo}/${busqueda}` : `${tipo}/${categoria}`;
 
+
+export const cortarArrayPeliculas = array => array.slice(0, 5);

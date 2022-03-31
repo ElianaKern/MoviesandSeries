@@ -10,13 +10,11 @@ import DescripcionActor from './components/DescripcionActor';
 import Footer from './components/Footer';
 import Contexto from './contexto/Contexto';
 import { useState } from 'react';
-import { useContext } from 'react';
 import NavBarLateral from './components/NavBarLateral';
 
 const App = () => {
-  const [tipo, setTipo] = useState('movie'); //esta variable de estado tendria que tenerla en todos mis componentes??
+  const [tipo, setTipo] = useState('movie');
   const contexto = { tipo: tipo, setTipo: setTipo };
-  // const valorTipo = useContext(Contexto).tipo//terminar de entender esto y revisar como lo recibe el UseFetch
   return (
     <BrowserRouter>
       <Contexto.Provider value={contexto}>

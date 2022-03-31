@@ -34,7 +34,6 @@ const PresentacionTarjetas = ({ titulo, peliculas }) => {
           </article>
         ))}
       </div>
-      <h4>PAGINADO</h4>
     </section>
   );
 };

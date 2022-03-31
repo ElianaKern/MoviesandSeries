@@ -7,7 +7,7 @@ import {
   query,
   apiKey,
   lenguaje,
-  page,
+  paginacion,
 } from './Auxiliares';
 import PresentacionTarjetas from './PresentacionTarjetas';
 import { FaSearch } from 'react-icons/fa';
@@ -35,7 +35,7 @@ const Search = () => {
       fetch(
         `${baseUrl}/${search}/${valorTipo}?${query}=${searchParams.get(
           'query'
-        )}&${apiKey}&${lenguaje}=es-AR&${page}=1`
+        )}&${apiKey}&${lenguaje}=es-AR&${paginacion}=1`
       )
         .then((res) => res.json())
         .then((data) => setResultados(data.results));
