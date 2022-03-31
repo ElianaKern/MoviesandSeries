@@ -5,7 +5,8 @@
   @include FlexColumn();
   width: 40%;
   height: 60vh;
-  border: solid 1px $color-secundario;
+  border: 3px solid $color-secundario;
+  border-radius: 5px;
   margin: 20px;
   position: relative;
   .title-list {
@@ -26,12 +27,13 @@
   }
   .list::-webkit-scrollbar {
     width: 13px;
-    background-color: rgba(41, 53, 155, 0.198);
+    background-color: rgba(47, 57, 148, 0.198);
   }
   .list::-webkit-scrollbar-thumb {
-    background: $color-principal;
+    background: $color-secundario;
     border-radius: 5px;
-    border: 2px solid $color-secundario;
+    border: 1px solid $color-secundario;
+    box-shadow: $box-shadow-secundario;
   }
 }
 

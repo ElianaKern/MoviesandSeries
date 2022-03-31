@@ -15,7 +15,6 @@ const DescripcionMovie = () => {
   const handleClick = () => {
     setVerElenco(true);
   };
-  console.log(pelicula);
   return (
     <section
       className="secccion-descripcion-movie"

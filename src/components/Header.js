@@ -30,7 +30,7 @@ const Header = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2500,
     pauseOnHover: true,
     arrows: false,
   };
@@ -47,12 +47,12 @@ const Header = () => {
             />
             <div className="modal-container">
               <div className="modal-pelicula">
-                <h3>{pelicula.title}</h3>
-                <p>{pelicula.overview}</p>
-                <Link to={`/${valorTipo}/${pelicula.id}`}>
-                  <button>
-                    <span>Ver mas...</span>
-                  </button>
+                <div className='modal-descripcion'>
+                  <h3>{pelicula.title}</h3>
+                  <p>{pelicula.overview}</p>
+                </div>
+                <Link to={`/${valorTipo}/${pelicula.id}`} className='ver-mas'>
+                  <span>Ver mas...</span>
                 </Link>
               </div>
             </div>

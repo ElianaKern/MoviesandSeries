@@ -13,7 +13,6 @@ import {
 const DescripcionActor = () => {
   const [data, setData] = useState([]);
   const params = useParams();
-
   useEffect(() => {
     fetch(
       `${baseUrl}/person/${params.id}?${apiKey}&${lenguaje}=es-AR&${page}=1`
@@ -21,8 +20,6 @@ const DescripcionActor = () => {
       .then((res) => res.json())
       .then((dataRes) => setData(dataRes));
   }, []);
-  console.log(data);
-
   return (
     <section className="seccion-datos-actor">
       <div className="container-datos-actor">

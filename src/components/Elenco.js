@@ -19,7 +19,6 @@ const Elenco = ({ setVerElenco }) => {
   const params = useParams();
   const [data, setData] = useState([]);
   const valorTipo = useContext(Contexto).tipo;
-
   useEffect(() => {
     fetch(
       `${baseUrl}/${valorTipo}/${params.id}/${credits}?${apiKey}&${lenguaje}=es-AR&${page}=1`
@@ -27,13 +26,9 @@ const Elenco = ({ setVerElenco }) => {
       .then((res) => res.json())
       .then((dataRes) => setData(dataRes));
   }, []);
-
-  console.log(data);
-
   const handleClick = () => {
     setVerElenco(false);
   };
-
   return (
     <div className="modal-container-elenco">
       <div className="container-list">

@@ -40,7 +40,7 @@
 }
 
 @mixin BorderButtonTarjeta() {
-  border-width: 0px 1px 1px 1px;
+  border-width: 0px 0px 1px 0px;
   border-style: solid;
   border-color: $color-secundario
 }
@@ -59,10 +59,10 @@
 }
 
 @mixin Button() {
-  background-color: $color-principal;
+  background-color: $color-secundario;
   font-size: 16px;
   padding: 8px;
   color: $color-titulos;
-  border-radius: 20%;
-  box-shadow: $box-shadow-secundario;
+  border-radius: 10%;
+  box-shadow: $box-shadow-principal;
 }
