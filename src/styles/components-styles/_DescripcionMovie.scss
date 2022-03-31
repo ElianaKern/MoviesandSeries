@@ -19,6 +19,8 @@
         box-sizing: content-box;
         .container {
           width: 85%;
+          border: 3px solid $color-secundario;
+          border-radius: 5px;
           .poster {
             width: 100%;
           }

@@ -9,7 +9,7 @@
   h2 {
     color: $color-titulos;
     margin-bottom: 1%;
-    font-size: 18px;
+    font-size: 20px;
   }
   .container-tarjetas {
     @include FlexCentradoCompleto();
@@ -17,6 +17,8 @@
     margin-bottom: 2%;
     .tarjeta {
       @include EstiloContenedorTarjeta();
+      border: 3px solid $color-secundario;
+      border-radius: 5px;
       .link {
         text-decoration: none;
         color: $color-titulos;
@@ -38,7 +40,6 @@
       }
       .icono-eye {
         @include FlexCentrado();
-        @include BorderButtonTarjeta();
         .eye {
           margin: 8px;
           padding: 5px;
