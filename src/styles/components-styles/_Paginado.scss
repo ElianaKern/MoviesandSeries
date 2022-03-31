@@ -1,0 +1,23 @@
+@import "../utilidades-styles/mixins";
+@import "../utilidades-styles/variables";
+.paginado {
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+    button {
+        @include Button();
+        box-shadow: $box-shadow-secundario;
+        margin: 5px;
+        width: 40px;
+        height: 45px;
+    }
+    button:hover{
+        box-shadow: $box-shadow-principal;
+    }
+    span {
+        margin:10px;
+        color: $color-titulos;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}

@@ -10,7 +10,7 @@ import Contexto from '../contexto/Contexto';
 const DescripcionMovie = () => {
   const valorTipo = useContext(Contexto).tipo;
   const params = useParams();
-  const pelicula = UseFetch(valorTipo, params.id);
+  const pelicula = UseFetch(valorTipo, params.id, 1);
   const [verElenco, setVerElenco] = useState(false);
   const handleClick = () => {
     setVerElenco(true);
