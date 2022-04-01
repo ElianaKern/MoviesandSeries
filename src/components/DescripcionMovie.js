@@ -1,4 +1,6 @@
 import '../styles/components-styles/_DescripcionMovie.scss';
+import { ImEye } from 'react-icons/im';
+import { BsStarFill } from "react-icons/bs";
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { urlBaseImg } from '../components/Auxiliares';
@@ -44,7 +46,9 @@ const DescripcionMovie = () => {
             <div>
               <p>Fecha de lanzamiento: {pelicula.release_date} </p>
               <p>Duracion : {pelicula.runtime} minutos.</p>
-              <p>Puntuacion : {pelicula.vote_average}</p>
+            </div>
+            <div>
+              <h5>Puntuacion : {pelicula.vote_average}/10 <BsStarFill className='estrella'/> </h5>
             </div>
             <div>
               <h5>Reseña :</h5>
@@ -65,7 +69,10 @@ const DescripcionMovie = () => {
               ))}
             </div>
             <div>
-              <button onClick={handleClick}>Ver Elenco</button>
+              <h5>Elenco</h5>
+              <button onClick={handleClick} className="icono-eye">
+               <ImEye className="eye" />
+              </button>
             </div>
           </div>
           {verElenco && <Elenco setVerElenco={setVerElenco} />}

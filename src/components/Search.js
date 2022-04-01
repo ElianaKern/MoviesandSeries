@@ -41,7 +41,7 @@ const Search = () => {
         .then((data) => setResultados(data.results));
     }
   }, [searchParams]);
-
+///${baseUrl}/search/multi?api_key=<<api_key>>&language=en-US&page=1
   return (
     <section className="seccion-busqueda">
       <div className="busqueda">

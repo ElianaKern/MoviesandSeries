@@ -25,7 +25,7 @@ const PresentacionTarjetas = ({ titulo, peliculas }) => {
                 alt={`poster de ${pelicula.title}`}
               ></img>
               <div className="title-tarjeta">
-                <h3>{pelicula.title}</h3>
+                {pelicula.title ? <h3>{pelicula.title}</h3> : <h3>{pelicula.name}</h3>}
               </div>
               <div className="icono-eye">
                 <ImEye className="eye" />

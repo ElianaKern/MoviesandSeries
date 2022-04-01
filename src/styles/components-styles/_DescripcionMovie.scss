@@ -46,6 +46,10 @@
           h5 {
             margin-bottom: 3px;
             font-size: 18px;
+            .estrella {
+              font-size: 28px;
+              color:$color-secundario;
+            }
           }
           ul {
             li {
@@ -56,48 +60,61 @@
             font-weight: bold;
             font-size: 16px;
           }
-          button {
-            @include Button();
-            margin-bottom: 10px;
+          .icono-eye {
+            @include FlexCentrado();
+            border-radius: 50%;
+            background-color: transparent;
+            .eye {
+              margin: 8px;
+              padding: 5px;
+              border-radius: 13px;
+              border: 1px solid rgba(0, 0, 0, 0.185);
+              font-size: 18px;
+              color: $color-titulos;
+            }
+            .eye:hover {
+              box-shadow: $box-shadow-secundario;
+              transform: scale(1.1);
+            }
           }
         }
       }
     }
   }
-}
 
-/*//////////////////////////////////////////////////////
+  /*//////////////////////////////////////////////////////
         RESPONSIVE
 ///////////////////////////////////////////////////////*/
-@media screen and (max-width: 800px) {
-  .secccion-descripcion-movie {
-    .background-opacity {
-      .container-poster-descripcion {
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        margin: 5%;
-        .container-poster {
+  @media screen and (max-width: 800px) {
+    .secccion-descripcion-movie {
+      .background-opacity {
+        .container-poster-descripcion {
+          flex-direction: column;
+          align-items: center;
           width: 90%;
-          display: flex;
-          justify-content: center;
-          .container {
-            width: 100%;
+          margin: 5%;
+          .container-poster {
+            width: 90%;
             display: flex;
             justify-content: center;
-            .poster {
-              width: 70%;
+            .container {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              .poster {
+                width: 70%;
+              }
             }
           }
-        }
-        .container-descripcion {
-          width: 90%;
-          margin-top: 2%;
-          div{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+          .container-descripcion {
+            width: 90%;
+            margin-top: 2%;
+            div {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
           }
         }
       }
