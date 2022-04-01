@@ -8,6 +8,7 @@ import Search from './components/Search';
 import DescripcionMovie from './components/DescripcionMovie';
 import DescripcionActor from './components/DescripcionActor';
 import Footer from './components/Footer';
+import RutaNoEncontrada from './components/RutaNoEncontrada';
 import Contexto from './contexto/Contexto';
 import { useState } from 'react';
 import NavBarLateral from './components/NavBarLateral';
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/:tipo/:id" element={<DescripcionMovie />} />
           <Route path="/actor/:id" element={<DescripcionActor />} />
+          <Route path="*" element={<RutaNoEncontrada/>}/>
         </Routes>
         <Footer></Footer>
       </Contexto.Provider>

@@ -16,9 +16,3 @@ export const urlBaseImgCast = "https://image.tmdb.org/t/p/w300"
 export const hrefMail = "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTNqLMpbkNnXLSSbfqWfxblhJnKvxGlXhdWrjqrFkPHqKBWNkFdsldcjcTHpxZSkVChGDV"
 export const hrefLinkedin = "https://www.linkedin.com/in/eliana-kern-506158235/"
 export const hrefGitHub = "https://github.com/ElianaKern"
-
-// export const querisUrl = (categoria, tipo, busqueda) =>
-// busqueda ? `${categoria}/${tipo}/${busqueda}` : `${tipo}/${categoria}`;
-
-
-export const cortarArrayPeliculas = array => array.slice(0, 5);

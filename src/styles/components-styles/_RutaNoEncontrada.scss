@@ -1,0 +1,47 @@
+@import "../utilidades-styles/variables";
+
+.container-error-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    .error-404{
+        width: 900px;
+        .img-404{
+            width: 100%;
+            border-radius: 35% 15%;
+            box-shadow: $box-shadow-secundario;
+        }
+    }
+}
+
+/*//////////////////////////////////////////////////////
+        RESPONSIVE
+///////////////////////////////////////////////////////*/
+@media screen and (max-width: 1000px) {
+    .container-error-404 {
+        height: 80vh;
+        .error-404{
+            width: 600px;
+            .img-404{
+                width: 100%;
+                border-radius: 35% 15%;
+                box-shadow: $box-shadow-secundario;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container-error-404 {
+        height: 80vh;
+        .error-404{
+            width: 300px;
+            .img-404{
+                width: 100%;
+                border-radius: 35% 15%;
+                box-shadow: $box-shadow-secundario;
+            }
+        }
+    }
+}
