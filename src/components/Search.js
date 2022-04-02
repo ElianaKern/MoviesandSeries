@@ -19,7 +19,7 @@ const Search = () => {
   const [valorDelInput, setValorDelInput] = useState('');
   const [resultados, setResultados] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams({
-    query: "diario de una pasion",
+    query: "la niñera",
   });
 
   const handleChange = (e) => {
@@ -55,7 +55,7 @@ const Search = () => {
               aria-label="introducir nombre"
             />
             <button type="submit" aria-label="buscar">
-              <FaSearch className="lupa" />
+              <FaSearch className="lupa"/>
             </button>
           </div>
         </form>

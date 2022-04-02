@@ -20,6 +20,19 @@ nav {
     border-radius: 10px;
     box-shadow: $box-shadow-secundario;
   }
+  .nav-menu {
+    .mensaje-bienvenida {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $color-titulos;
+      h2 {
+        padding-right: 20px;
+        margin-top: 50px;
+      }
+    }
+  }
   .ul-nav {
     display: flex;
     width: 40%;
