@@ -8,13 +8,13 @@ import UseFetch from '../hooks/UseFetch';
 import Elenco from './Elenco';
 import { useContext } from 'react';
 import Contexto from '../contexto/Contexto';
-import { useEffect } from 'react';
-import {
-  baseUrl,
-  apiKey,
-  lenguaje,
-  paginacion,
-} from '../components/Auxiliares';
+// import { useEffect } from 'react';
+// import {
+//   baseUrl,
+//   apiKey,
+//   lenguaje,
+//   paginacion,
+// } from '../components/Auxiliares';
 
 const DescripcionMovie = () => {
   const valorTipo = useContext(Contexto).tipo;
@@ -105,7 +105,7 @@ const DescripcionMovie = () => {
   );
 };
 export default DescripcionMovie;
-{/* <div className="container__video">
+/* <div className="container__video">
   <iframe
     title={`YouTube video player. Trailer von ${info.title}`}
     gyroscope="true"
@@ -114,4 +114,4 @@ export default DescripcionMovie;
     src={`${URL_VIDEO}${filtrarTrailer.key}`}
     allowFullScreen
   />
-</div>; */}
+</div>; */

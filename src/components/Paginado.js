@@ -13,12 +13,12 @@ const Paginado = ({ handleClickPrev, handleClickNext, page, totalPages, handleCl
         <span>{page}</span>
         <button
           onClick={handleClickNext}
-          disabled={totalPages > 500 ? page === 500 : page == totalPages}
+          disabled={totalPages > 500 ? page === 500 : page === totalPages}
         ><ImIcons.ImNext2/></button>
   
         <button 
          onClick={() => handleClickLastPage(totalPages > 500 ? 500 : totalPages)}
-         disabled={totalPages > 500 ? page === 500 : page == totalPages}
+         disabled={totalPages > 500 ? page === 500 : page === totalPages}
          ><ImIcons.ImLast/></button>
       </div>
     )

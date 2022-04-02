@@ -13,7 +13,7 @@ const UseFetch = (tipo, categoria, page) => {
       .then(dataRes => {
         setData(dataRes);
       });
-  }, [contexto, page]);
+  }, [contexto, page, tipo, categoria]);
 
   return data;
 };

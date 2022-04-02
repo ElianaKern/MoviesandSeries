@@ -1,5 +1,5 @@
 import '../styles/components-styles/_ListMovie.scss';
-import { urlBaseImg, tipoMovie } from '../components/Auxiliares';
+import { urlBaseImg } from '../components/Auxiliares';
 import Item from '../components/Item';
 import UseFetch from '../hooks/UseFetch';
 import NoDisponible from "../assets/no-disponible.png";

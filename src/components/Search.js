@@ -40,7 +40,7 @@ const Search = () => {
         .then((res) => res.json())
         .then((data) => setResultados(data.results));
     }
-  }, [searchParams]);
+  }, [searchParams,valorTipo]);
 ///${baseUrl}/search/multi?api_key=<<api_key>>&language=en-US&page=1
   return (
     <section className="seccion-busqueda">
