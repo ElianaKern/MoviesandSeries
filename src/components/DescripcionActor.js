@@ -19,7 +19,7 @@ const DescripcionActor = () => {
     )
       .then((res) => res.json())
       .then((dataRes) => setData(dataRes));
-  }, []);
+  }, [params.id]);
   return (
     <section className="seccion-datos-actor">
       <div className="container-datos-actor">
@@ -32,6 +32,7 @@ const DescripcionActor = () => {
                   : NoDisponible
               }
               className="img-actor"
+              alt={`poster de ${data.name}`}
             />
           </div>
         </div>
