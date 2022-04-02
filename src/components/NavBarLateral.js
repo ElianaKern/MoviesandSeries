@@ -15,8 +15,8 @@ const NavBarLateral = () => {
   const handleClickTipo = (e) => {
     contexto.setTipo(e.target.value);
   };
-  const [menuHamburguesa, setMenuHamburguesa] = useState(false);
-  const mostrarBarraLateral = () => setMenuHamburguesa(!menuHamburguesa);
+  const [menu, setMenu] = useState(false);
+  const mostrarBarraLateral = () => setMenu(!menu);
 
   const valorTipo = useContext(Contexto).tipo;
   const dataNavBarLateral = [
@@ -56,7 +56,7 @@ const NavBarLateral = () => {
           <FaIcons.FaBars onClick={mostrarBarraLateral} />
         </Link>
       </div>
-      <nav className={menuHamburguesa ? 'nav-menu active' : 'nav-menu'}>
+      <nav className={menu ? 'nav-menu active' : 'nav-menu'}>
         <ul className="nav-menu-items" onClick={mostrarBarraLateral}>
           <li className="navbar-toggle">
             <div className="logo-menu">

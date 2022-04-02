@@ -1,6 +1,6 @@
 import '../styles/components-styles/_DescripcionMovie.scss';
 import { ImEye } from 'react-icons/im';
-import { BsStarFill } from "react-icons/bs";
+import { BsStarFill } from 'react-icons/bs';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { urlBaseImg } from '../components/Auxiliares';
@@ -8,6 +8,13 @@ import UseFetch from '../hooks/UseFetch';
 import Elenco from './Elenco';
 import { useContext } from 'react';
 import Contexto from '../contexto/Contexto';
+import { useEffect } from 'react';
+import {
+  baseUrl,
+  apiKey,
+  lenguaje,
+  paginacion,
+} from '../components/Auxiliares';
 
 const DescripcionMovie = () => {
   const valorTipo = useContext(Contexto).tipo;
@@ -17,6 +24,17 @@ const DescripcionMovie = () => {
   const handleClick = () => {
     setVerElenco(true);
   };
+
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //     fetch(`${baseUrl}/${valorTipo}/${params.id}/videos?${apiKey}&${lenguaje}=es-AR&`)
+  //        //api.themoviedb.org/3/tv/11250/videos?api_key=&language=en-US
+  //     .then((res) => res.json())
+  //       .then(dataRes => {
+  //         setData(dataRes);
+  //       });
+  //   }, []);
+
   return (
     <section
       className="secccion-descripcion-movie"
@@ -27,7 +45,7 @@ const DescripcionMovie = () => {
       <div className="background-opacity">
         <article className="container-poster-descripcion">
           <div className="container-poster">
-            <div className='container'>
+            <div className="container">
               <img
                 src={`${urlBaseImg}w500/${pelicula.poster_path}`}
                 alt={
@@ -47,8 +65,9 @@ const DescripcionMovie = () => {
               <p>Fecha de lanzamiento: {pelicula.release_date} </p>
               <p>Duracion : {pelicula.runtime} minutos.</p>
             </div>
-            <div>
-              <h5>Puntuacion : {pelicula.vote_average}/10 <BsStarFill className='estrella'/> </h5>
+            <div className="puntuacion">
+              <BsStarFill className='estrella'/>
+              <h5>{pelicula.vote_average}<span> /10</span></h5>
             </div>
             <div>
               <h5>Reseña :</h5>
@@ -70,8 +89,12 @@ const DescripcionMovie = () => {
             </div>
             <div>
               <h5>Elenco</h5>
-              <button onClick={handleClick} className="icono-eye">
-               <ImEye className="eye" />
+              <button
+                onClick={handleClick}
+                className="icono-eye"
+                aria-label="ver elenco"
+              >
+                <ImEye className="eye" />
               </button>
             </div>
           </div>
@@ -82,3 +105,13 @@ const DescripcionMovie = () => {
   );
 };
 export default DescripcionMovie;
+{/* <div className="container__video">
+  <iframe
+    title={`YouTube video player. Trailer von ${info.title}`}
+    gyroscope="true"
+    encrypted-media="true"
+    frameBorder="0"
+    src={`${URL_VIDEO}${filtrarTrailer.key}`}
+    allowFullScreen
+  />
+</div>; */}
