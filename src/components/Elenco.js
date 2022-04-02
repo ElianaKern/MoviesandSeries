@@ -25,7 +25,7 @@ const Elenco = ({ setVerElenco }) => {
     )
       .then((res) => res.json())
       .then((dataRes) => setData(dataRes));
-  }, [params.id]);
+  }, [params.id, valorTipo]);
   const handleClick = () => {
     setVerElenco(false);
   };
