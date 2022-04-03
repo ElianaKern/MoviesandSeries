@@ -1,6 +1,6 @@
 <h1 align= "center"> <img src="https://i0.wp.com/redhistoria.com/wp-content/uploads/2020/12/rasca-y-gana.png?fit=800%2C914&ssl=1" width="50px"/>Movies and Series.App buscador de películas y series</h1>
 <p align= "center">
-<img src="https://lh3.googleusercontent.com/i812PBVp3I_qH-zEzy3W7lSRpCZSusx4E4N5xebDgjkTT5XRruX4stTne_tIzF4zWBhhrOQ=s170" width="500px"/>
+<img src="https://lh3.googleusercontent.com/i812PBVp3I_qH-zEzy3W7lSRpCZSusx4E4N5xebDgjkTT5XRruX4stTne_tIzF4zWBhhrOQ=s170" width="800px"/>
  </p>
 
 
@@ -37,6 +37,7 @@ ___
 
  - [API TMDB](https://www.themoviedb.org/)
  - [react-icons](https://react-icons.github.io/react-icons)
+ - Para el carrousel use [slick](https://kenwheeler.github.io/slick/)
 
 ___
 
