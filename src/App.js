@@ -18,6 +18,7 @@ const App = () => {
   const contexto = { tipo: tipo, setTipo: setTipo };
   return (
     <BrowserRouter>
+    {/* esto deberia ser Context.Provider */}
       <Contexto.Provider value={contexto}>
         {window.innerWidth >= 700 ? <Nav /> : <NavBarLateral />}
         <Routes>
