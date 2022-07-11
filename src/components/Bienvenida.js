@@ -1,5 +1,5 @@
 import "../styles/components-styles/_Bienvenida.scss"
-
+// Este archivo deberia borrarse si no se usa
 const Bienvenida = () => {
     const [menuHamburguesa, setMenuHamburguesa] = useState(false);
     const mostrarBarraLateral = () => setMenuHamburguesa(!menuHamburguesa);

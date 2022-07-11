@@ -1,3 +1,4 @@
+// No dejes valores comentados
 // export const base = "https://api.themoviedb.org/3/movie/now_playing?api_key=<<api_key>>&language=en-US&page=1"
 // export const busqueda = "https://api.themoviedb.org/3/trending/movie/week?api_key=<<api_key>>&language=en-US&page=1"
 export const baseUrl = "https://api.themoviedb.org/3"

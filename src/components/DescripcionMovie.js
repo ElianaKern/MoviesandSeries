@@ -24,7 +24,7 @@ const DescripcionMovie = () => {
   const handleClick = () => {
     setVerElenco(true);
   };
-
+// no dejes codigo comentado en una entrega
   // const [data, setData] = useState([]);
   // useEffect(() => {
   //     fetch(`${baseUrl}/${valorTipo}/${params.id}/videos?${apiKey}&${lenguaje}=es-AR&`)
